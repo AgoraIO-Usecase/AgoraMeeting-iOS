@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'AgoraMeetingUI'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'AgoraMeetingUI'
   s.homepage         = 'https://agora.io'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Agora Lab' => 'develope@agora.io' }
-  s.source           = { :git => 'https://github.com/AgoraIO-Usecase/AgoraMeeting-iOS.git', :tag => 'v_ui_0.0.3' }
+  s.source           = { :git => 'https://github.com/AgoraIO-Usecase/AgoraMeeting-iOS.git', :tag => 'v_ui_0.0.4' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'DEFINES_MODULE' => 'YES' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'DEFINES_MODULE' => 'YES' }
   s.ios.deployment_target = '11.0'
