@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.source_files = 'SDK/AgoraMeetingUI/AgoraMeetingUI/**/*.{h,m,swift}'
   s.resource_bundles = {
-    'AgoraMeetingUI' => ['SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Image/*.xcassets', 'AgoraMeetingUI/Assets/Xib/**/*', 'AgoraMeetingUI/Assets/Localizable/*.lproj/*.strings', 'AgoraMeetingUI/Assets/Other/*']
+    'AgoraMeetingUI' => ['SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Image/*.xcassets', 'SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Xib/**/*', 'SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Localizable/*.lproj/*.strings', 'AgoraMeetingUI/Assets/Other/*']
   }
   s.static_framework = true
   s.swift_versions = "5.0"
