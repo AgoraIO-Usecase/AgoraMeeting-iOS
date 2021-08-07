@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "注册声网账号"; ObjectID = "8Mu-nl-KGc"; */
+"8Mu-nl-KGc.normalTitle" = "注册声网账号";
+
+/* Class = "UIButton"; normalTitle = "查看文档"; ObjectID = "9bm-e6-5T1"; */
+"9bm-e6-5T1.normalTitle" = "查看文档";
+
+/* Class = "UILabel"; text = "www.agora.io"; ObjectID = "V4v-ry-jPV"; */
+"V4v-ry-jPV.text" = "www.agora.io";
+
+/* Class = "UILabel"; text = "版本号：V2.0.0.1，发版时间：2020.2.2\\nasda"; ObjectID = "gCI-xR-NzZ"; */
+"gCI-xR-NzZ.text" = "版本号：V2.0.0.1，发版时间：2020.2.2\\nasda";
+
+/* Class = "UILabel"; text = "Agora Meeting"; ObjectID = "hol-KC-tkT"; */
+"hol-KC-tkT.text" = "Agora Meeting";
+
+/* Class = "UIButton"; normalTitle = "隐私政策"; ObjectID = "iHS-TM-ygJ"; */
+"iHS-TM-ygJ.normalTitle" = "隐私政策";

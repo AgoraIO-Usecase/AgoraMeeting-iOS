@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AboutView" id="dmz-md-t8Q" customClass="AboutView" customModule="AgoraMeetingUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wCY-XF-p3s">
+                    <rect key="frame" x="163" y="104" width="88" height="59"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora Meeting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hol-KC-tkT">
+                    <rect key="frame" x="143" y="173" width="128.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号：V2.0.0.1，发版时间：2020.2.2\nasda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-xR-NzZ">
+                    <rect key="frame" x="89.5" y="205" width="235" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mu-nl-KGc">
+                    <rect key="frame" x="125" y="238.5" width="164" height="44"/>
+                    <color key="backgroundColor" red="0.30196078430000001" green="0.63137254899999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Nsg-io-nFD"/>
+                        <constraint firstAttribute="width" constant="164" id="u6I-LJ-qkA"/>
+                    </constraints>
+                    <state key="normal" title="注册声网账号">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds " value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bm-e6-5T1">
+                    <rect key="frame" x="125" y="302.5" width="164" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="164" id="NPy-hw-dMA"/>
+                        <constraint firstAttribute="height" constant="44" id="o2l-a4-evj"/>
+                    </constraints>
+                    <state key="normal" title="查看文档">
+                        <color key="titleColor" red="0.30196078430000001" green="0.63137254899999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.agora.io" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-ry-jPV">
+                    <rect key="frame" x="171.5" y="843.5" width="71" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-yU-V6v">
+                    <rect key="frame" x="152" y="807" width="50" height="26.5"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="免责声明">
+                                <attributes>
+                                    <color key="NSColor" red="0.1803921568627451" green="0.2196078431372549" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="cellTitle"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-TM-ygJ">
+                    <rect key="frame" x="212" y="806.5" width="50" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="隐私政策">
+                        <color key="titleColor" red="0.18039215689999999" green="0.21960784310000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ay7-xr-ZL6"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ay7-xr-ZL6" firstAttribute="bottom" secondItem="V4v-ry-jPV" secondAttribute="bottom" constant="5" id="47I-OW-Qd4"/>
+                <constraint firstItem="V4v-ry-jPV" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="5rv-5X-v1V"/>
+                <constraint firstItem="hol-KC-tkT" firstAttribute="top" secondItem="wCY-XF-p3s" secondAttribute="bottom" constant="10" id="8ST-T4-f5L"/>
+                <constraint firstItem="9bm-e6-5T1" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="A7i-Jj-tDw"/>
+                <constraint firstItem="V4v-ry-jPV" firstAttribute="top" secondItem="rpn-yU-V6v" secondAttribute="bottom" constant="10" id="J5G-Yh-2e1"/>
+                <constraint firstItem="9bm-e6-5T1" firstAttribute="top" secondItem="8Mu-nl-KGc" secondAttribute="bottom" constant="20" id="JiR-ta-7fM"/>
+                <constraint firstItem="rpn-yU-V6v" firstAttribute="trailing" secondItem="dmz-md-t8Q" secondAttribute="centerX" constant="-5" id="LTS-m7-Vay"/>
+                <constraint firstItem="wCY-XF-p3s" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="NIH-P0-eDu"/>
+                <constraint firstItem="gCI-xR-NzZ" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="Qa8-NL-Eh0"/>
+                <constraint firstItem="8Mu-nl-KGc" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="Utl-rv-yxu"/>
+                <constraint firstItem="gCI-xR-NzZ" firstAttribute="top" secondItem="hol-KC-tkT" secondAttribute="bottom" constant="8" symbolic="YES" id="WCS-Kp-HKd"/>
+                <constraint firstItem="V4v-ry-jPV" firstAttribute="top" secondItem="iHS-TM-ygJ" secondAttribute="bottom" constant="10" id="fEt-eT-XTG"/>
+                <constraint firstItem="iHS-TM-ygJ" firstAttribute="leading" secondItem="dmz-md-t8Q" secondAttribute="centerX" constant="5" id="id0-Hd-FD8"/>
+                <constraint firstItem="hol-KC-tkT" firstAttribute="centerX" secondItem="dmz-md-t8Q" secondAttribute="centerX" id="r7g-5c-Bqe"/>
+                <constraint firstItem="wCY-XF-p3s" firstAttribute="top" secondItem="ay7-xr-ZL6" secondAttribute="top" constant="60" id="tDl-7k-Rmh"/>
+                <constraint firstItem="8Mu-nl-KGc" firstAttribute="top" secondItem="gCI-xR-NzZ" secondAttribute="bottom" constant="20" id="ujO-eg-XHU"/>
+            </constraints>
+            <connections>
+                <outlet property="disclaimerButton" destination="rpn-yU-V6v" id="45M-Pw-oDK"/>
+                <outlet property="docButton" destination="9bm-e6-5T1" id="3fz-r3-zh3"/>
+                <outlet property="privacyButton" destination="iHS-TM-ygJ" id="QfG-uD-JUD"/>
+                <outlet property="registerButton" destination="8Mu-nl-KGc" id="FRH-EY-VzE"/>
+                <outlet property="versionLabel" destination="gCI-xR-NzZ" id="dEa-Ie-D2w"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="blue-logo" width="88" height="59"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

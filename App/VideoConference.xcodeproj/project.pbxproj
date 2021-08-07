@@ -1,0 +1,1599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		263A9C7C25EFAB2900C9DB7F /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A9C7B25EFAB2900C9DB7F /* ReplayKit.framework */; };
+		263A9C8325EFAB2900C9DB7F /* ScreenSharingBroadcast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		265BA51C25F0FD6500FAB352 /* AgoraUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BA51A25F0FD6400FAB352 /* AgoraUploader.swift */; };
+		266DC9A7268DDB5400B2AA38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784D20A52463EB810065985A /* Main.storyboard */; };
+		266DCB4E2692F47500B2AA38 /* TokenBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 266DCB392692F47500B2AA38 /* TokenBuilder.m */; };
+		266DCB4F2692F47500B2AA38 /* RtmTokenTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 266DCB3D2692F47500B2AA38 /* RtmTokenTool.mm */; };
+		266DCB502692F47500B2AA38 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 266DCB412692F47500B2AA38 /* md5.cpp */; };
+		267404B326A6C508009345D3 /* ScoreStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267404B126A6C508009345D3 /* ScoreStarView.xib */; };
+		267404B926A6C51C009345D3 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267404B626A6C51C009345D3 /* ScoreView.swift */; };
+		267404BA26A6C51C009345D3 /* ScoreStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267404B726A6C51C009345D3 /* ScoreStarView.swift */; };
+		267404BB26A6C51C009345D3 /* ScoreAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267404B826A6C51C009345D3 /* ScoreAlertVC.swift */; };
+		2674FA50269E945C00DAFB78 /* MeetingServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674FA4F269E945C00DAFB78 /* MeetingServerApi.swift */; };
+		2674FC8426A16FC700DAFB78 /* SelectedNotiTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674FC8326A16FC700DAFB78 /* SelectedNotiTypeVC.swift */; };
+		2674FC8B26A1711D00DAFB78 /* SelectedNotiTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674FC8A26A1711D00DAFB78 /* SelectedNotiTypeView.swift */; };
+		2674FC9026A171F800DAFB78 /* SelectedNotiTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2674FC8E26A171F800DAFB78 /* SelectedNotiTypeView.xib */; };
+		2685A832269D7990007E7F1B /* TermsAndPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685A831269D7990007E7F1B /* TermsAndPolicyVC.swift */; };
+		2685A836269D799A007E7F1B /* TermsAndPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685A835269D799A007E7F1B /* TermsAndPolicyView.swift */; };
+		2685A83B269D79F6007E7F1B /* Policy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2685A839269D79F6007E7F1B /* Policy.storyboard */; };
+		2685A846269D7DF7007E7F1B /* Policy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2685A844269D7DF7007E7F1B /* Policy.strings */; };
+		268EE681265E4C7200D595B7 /* LoginTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE67D265E4C7200D595B7 /* LoginTipsView.swift */; };
+		268EE683265E4C7200D595B7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE67F265E4C7200D595B7 /* LoginVC.swift */; };
+		268EE684265E4C7200D595B7 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE680265E4C7200D595B7 /* LoginVM.swift */; };
+		268EE68A265E4F5D00D595B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE689265E4F5D00D595B7 /* BaseViewController.swift */; };
+		268EE6A1265E529100D595B7 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE6A0265E529100D595B7 /* StorageManager.swift */; };
+		268EE6A5265E582D00D595B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE6A4265E582D00D595B7 /* Extensions.swift */; };
+		26B6E02A26A6822F008B28B1 /* privacy_en.html in Resources */ = {isa = PBXBuildFile; fileRef = 26B6E02826A6822F008B28B1 /* privacy_en.html */; };
+		26B6E02B26A6822F008B28B1 /* privacy_cn.html in Resources */ = {isa = PBXBuildFile; fileRef = 26B6E02926A6822F008B28B1 /* privacy_cn.html */; };
+		26C8941D2664E2620086317B /* KeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C894162664DFF00086317B /* KeyCenter.m */; };
+		26D124D6267059A7009ABE14 /* TextFieldCustomClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D124D5267059A7009ABE14 /* TextFieldCustomClear.swift */; };
+		26E40014269554CC00255041 /* LoginSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E40013269554CC00255041 /* LoginSetVC.swift */; };
+		26E4001926957FE100255041 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E4001726957FE100255041 /* AboutView.xib */; };
+		26E400222695807D00255041 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E400212695807D00255041 /* AboutView.swift */; };
+		26E400262695811700255041 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E400252695811700255041 /* AboutVC.swift */; };
+		26E400D226958F0700255041 /* BrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E400D126958F0700255041 /* BrowseVC.swift */; };
+		26E400F32695902300255041 /* disclaimer_cn.html in Resources */ = {isa = PBXBuildFile; fileRef = 26E400F12695902300255041 /* disclaimer_cn.html */; };
+		26E400F42695902300255041 /* disclaimer_en.html in Resources */ = {isa = PBXBuildFile; fileRef = 26E400F22695902300255041 /* disclaimer_en.html */; };
+		780356112465706D001F9624 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 780356132465706D001F9624 /* Localizable.strings */; };
+		784D20A92463EB820065985A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784D20A82463EB820065985A /* Assets.xcassets */; };
+		784D20AC2463EB820065985A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784D20AA2463EB820065985A /* LaunchScreen.storyboard */; };
+		784D20AF2463EB820065985A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 784D20AE2463EB820065985A /* main.m */; };
+		784D224B2464159D0065985A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 784D22482464159D0065985A /* AppDelegate.m */; };
+		8690D8CE25F742E700FF8251 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690D8CD25F742E700FF8251 /* SampleHandler.swift */; };
+		8B98F1A923481A0A48DEA700 /* Pods_VideoConference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC5E4E14A0F3AD5CA151FEA /* Pods_VideoConference.framework */; };
+		B384AE1E7448A15847731C93 /* Pods_ScreenSharingBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B07C58FB76CB543251CB17 /* Pods_ScreenSharingBroadcast.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		263A9C8125EFAB2900C9DB7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 784D20912463EB810065985A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 263A9C7925EFAB2900C9DB7F;
+			remoteInfo = ScreenSharingBroadcast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		263A9C8925EFAB2900C9DB7F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				263A9C8325EFAB2900C9DB7F /* ScreenSharingBroadcast.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0BC5E4E14A0F3AD5CA151FEA /* Pods_VideoConference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoConference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenSharingBroadcast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		263A9C7B25EFAB2900C9DB7F /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		263A9C9225F084EC00C9DB7F /* ScreenSharingBroadcastDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ScreenSharingBroadcastDebug.entitlements; sourceTree = "<group>"; };
+		263A9C9325F084EC00C9DB7F /* ScreenSharingBroadcast.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ScreenSharingBroadcast.entitlements; sourceTree = "<group>"; };
+		263A9C9625F084EC00C9DB7F /* ScreenSharingBroadcastRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ScreenSharingBroadcastRelease.entitlements; sourceTree = "<group>"; };
+		263A9C9725F084EC00C9DB7F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263A9D1925F099F900C9DB7F /* Agora Meeting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Agora Meeting.entitlements"; sourceTree = "<group>"; };
+		265BA51A25F0FD6400FAB352 /* AgoraUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgoraUploader.swift; sourceTree = "<group>"; };
+		266DC99C268DDA0300B2AA38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		266DC99E268DDA0500B2AA38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		266DC9A0268DDA2200B2AA38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		266DC9A2268DDA5400B2AA38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		266DCB392692F47500B2AA38 /* TokenBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenBuilder.m; sourceTree = "<group>"; };
+		266DCB3A2692F47500B2AA38 /* TokenBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenBuilder.h; sourceTree = "<group>"; };
+		266DCB3C2692F47500B2AA38 /* RtmTokenTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmTokenTool.h; sourceTree = "<group>"; };
+		266DCB3D2692F47500B2AA38 /* RtmTokenTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RtmTokenTool.mm; sourceTree = "<group>"; };
+		266DCB3F2692F47500B2AA38 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		266DCB412692F47500B2AA38 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		266DCB422692F47500B2AA38 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		266DCB432692F47500B2AA38 /* DynamicKey5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicKey5.h; sourceTree = "<group>"; };
+		266DCB442692F47500B2AA38 /* Packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packer.h; sourceTree = "<group>"; };
+		266DCB452692F47500B2AA38 /* generatorSignalToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generatorSignalToken.h; sourceTree = "<group>"; };
+		266DCB462692F47500B2AA38 /* AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessToken.h; sourceTree = "<group>"; };
+		266DCB472692F47500B2AA38 /* DynamicKey2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicKey2.h; sourceTree = "<group>"; };
+		266DCB482692F47500B2AA38 /* RtmTokenBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmTokenBuilder.h; sourceTree = "<group>"; };
+		266DCB492692F47500B2AA38 /* DynamicKey3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicKey3.h; sourceTree = "<group>"; };
+		266DCB4A2692F47500B2AA38 /* generatorSignalToken-Linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "generatorSignalToken-Linux.h"; sourceTree = "<group>"; };
+		266DCB4B2692F47500B2AA38 /* RtcTokenBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtcTokenBuilder.h; sourceTree = "<group>"; };
+		266DCB4C2692F47500B2AA38 /* DynamicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicKey.h; sourceTree = "<group>"; };
+		266DCB4D2692F47500B2AA38 /* DynamicKey4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicKey4.h; sourceTree = "<group>"; };
+		267404B226A6C508009345D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ScoreStarView.xib; sourceTree = "<group>"; };
+		267404B626A6C51C009345D3 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		267404B726A6C51C009345D3 /* ScoreStarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreStarView.swift; sourceTree = "<group>"; };
+		267404B826A6C51C009345D3 /* ScoreAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreAlertVC.swift; sourceTree = "<group>"; };
+		2674050526A6D4E4009345D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ScoreStarView.strings; sourceTree = "<group>"; };
+		2674050726A6D4E6009345D3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ScoreStarView.strings"; sourceTree = "<group>"; };
+		2674FA4F269E945C00DAFB78 /* MeetingServerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingServerApi.swift; sourceTree = "<group>"; };
+		2674FC8326A16FC700DAFB78 /* SelectedNotiTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedNotiTypeVC.swift; sourceTree = "<group>"; };
+		2674FC8A26A1711D00DAFB78 /* SelectedNotiTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedNotiTypeView.swift; sourceTree = "<group>"; };
+		2674FC8F26A171F800DAFB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ../../../../SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Xib/Base.lproj/SelectedNotiTypeView.xib; sourceTree = "<group>"; };
+		2674FC9326A1720200DAFB78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../../../SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Xib/en.lproj/SelectedNotiTypeView.strings; sourceTree = "<group>"; };
+		2674FC9426A1720500DAFB78 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../../../../SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Xib/zh-Hans.lproj/SelectedNotiTypeView.strings"; sourceTree = "<group>"; };
+		267C773525A6F34700D93422 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreML.framework; sourceTree = DEVELOPER_DIR; };
+		267C773725A6F35100D93422 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		267C773925A6F35900D93422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		267C773B25A6F36000D93422 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		267C773D25A6F36800D93422 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		267C773F25A6F37000D93422 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		267C774125A6F37600D93422 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/VideoToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		267C774325A6F37E00D93422 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		2685A831269D7990007E7F1B /* TermsAndPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndPolicyVC.swift; sourceTree = "<group>"; };
+		2685A835269D799A007E7F1B /* TermsAndPolicyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndPolicyView.swift; sourceTree = "<group>"; };
+		2685A83A269D79F6007E7F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Policy.storyboard; sourceTree = "<group>"; };
+		2685A845269D7DF7007E7F1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Policy.strings"; sourceTree = "<group>"; };
+		2685A849269D7E00007E7F1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Policy.strings; sourceTree = "<group>"; };
+		268EE577265E392400D595B7 /* VideoConference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoConference-Bridging-Header.h"; sourceTree = "<group>"; };
+		268EE67D265E4C7200D595B7 /* LoginTipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTipsView.swift; sourceTree = "<group>"; };
+		268EE67F265E4C7200D595B7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		268EE680265E4C7200D595B7 /* LoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		268EE689265E4F5D00D595B7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		268EE6A0265E529100D595B7 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		268EE6A4265E582D00D595B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		26B6E02826A6822F008B28B1 /* privacy_en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_en.html; sourceTree = "<group>"; };
+		26B6E02926A6822F008B28B1 /* privacy_cn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_cn.html; sourceTree = "<group>"; };
+		26C894162664DFF00086317B /* KeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCenter.m; sourceTree = "<group>"; };
+		26C894172664DFF00086317B /* KeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCenter.h; sourceTree = "<group>"; };
+		26D124D5267059A7009ABE14 /* TextFieldCustomClear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCustomClear.swift; sourceTree = "<group>"; };
+		26E40013269554CC00255041 /* LoginSetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSetVC.swift; sourceTree = "<group>"; };
+		26E4001826957FE100255041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutView.xib; sourceTree = "<group>"; };
+		26E4001C26957FEA00255041 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AboutView.strings; sourceTree = "<group>"; };
+		26E4001D26957FEC00255041 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AboutView.strings"; sourceTree = "<group>"; };
+		26E400212695807D00255041 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		26E400252695811700255041 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		26E400D126958F0700255041 /* BrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseVC.swift; sourceTree = "<group>"; };
+		26E400F12695902300255041 /* disclaimer_cn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disclaimer_cn.html; sourceTree = "<group>"; };
+		26E400F22695902300255041 /* disclaimer_en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disclaimer_en.html; sourceTree = "<group>"; };
+		3351E940BF7FF5EA8FD55946 /* Pods-VideoConference.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.prerelease.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.prerelease.xcconfig"; sourceTree = "<group>"; };
+		387BD497FFADE8B0DA2F07D0 /* Pods-ScreenSharingBroadcast.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.devrelease.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.devrelease.xcconfig"; sourceTree = "<group>"; };
+		4BB898E0BE81465537EDD455 /* Pods-ScreenSharingBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.release.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.release.xcconfig"; sourceTree = "<group>"; };
+		57C75254526E4BA3DA87C8E5 /* Pods-ScreenSharingBroadcast.qarelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.qarelease.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.qarelease.xcconfig"; sourceTree = "<group>"; };
+		780356122465706D001F9624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7803561424657070001F9624 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		784D20992463EB810065985A /* Agora Meeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora Meeting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784D20A62463EB810065985A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		784D20A82463EB820065985A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		784D20AB2463EB820065985A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		784D20AD2463EB820065985A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784D20AE2463EB820065985A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		784D22462464159D0065985A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		784D22482464159D0065985A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78F2325525F0D6BF0035B3D6 /* Agora MeetingDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Agora MeetingDebug.entitlements"; sourceTree = "<group>"; };
+		80B07C58FB76CB543251CB17 /* Pods_ScreenSharingBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenSharingBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80C352DBEAE9089B6E16EB89 /* Pods-VideoConference.testflightdevenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.testflightdevenv.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.testflightdevenv.xcconfig"; sourceTree = "<group>"; };
+		8690D8CD25F742E700FF8251 /* SampleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		8DFC4C50A584CD14238C244C /* Pods-ScreenSharingBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.debug.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
+		A3AA1CDDED4E961CF4E62543 /* Pods-VideoConference.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.devrelease.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.devrelease.xcconfig"; sourceTree = "<group>"; };
+		B04D7D656E6E637C1102C29D /* Pods-VideoConference.debug copy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.debug copy.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.debug copy.xcconfig"; sourceTree = "<group>"; };
+		D6AB445B4E9BE9419C8F4FBC /* Pods-ScreenSharingBroadcast.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.prerelease.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.prerelease.xcconfig"; sourceTree = "<group>"; };
+		E518D6B1D22836E711436D1A /* Pods-VideoConference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.debug.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.debug.xcconfig"; sourceTree = "<group>"; };
+		EE07238783FA1EC3CA49D426 /* Pods-VideoConference.qarelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.qarelease.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.qarelease.xcconfig"; sourceTree = "<group>"; };
+		FA8287D621E14DA781DA4EF5 /* Pods-ScreenSharingBroadcast.testflightdevenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenSharingBroadcast.testflightdevenv.xcconfig"; path = "Target Support Files/Pods-ScreenSharingBroadcast/Pods-ScreenSharingBroadcast.testflightdevenv.xcconfig"; sourceTree = "<group>"; };
+		FEC05613756A2D985355EFEC /* Pods-VideoConference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoConference.release.xcconfig"; path = "Target Support Files/Pods-VideoConference/Pods-VideoConference.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		263A9C7725EFAB2900C9DB7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263A9C7C25EFAB2900C9DB7F /* ReplayKit.framework in Frameworks */,
+				B384AE1E7448A15847731C93 /* Pods_ScreenSharingBroadcast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784D20962463EB810065985A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B98F1A923481A0A48DEA700 /* Pods_VideoConference.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		263A9C7D25EFAB2900C9DB7F /* ScreenSharingBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				265BA51A25F0FD6400FAB352 /* AgoraUploader.swift */,
+				8690D8CD25F742E700FF8251 /* SampleHandler.swift */,
+				263A9C9725F084EC00C9DB7F /* Info.plist */,
+				263A9C9325F084EC00C9DB7F /* ScreenSharingBroadcast.entitlements */,
+				263A9C9225F084EC00C9DB7F /* ScreenSharingBroadcastDebug.entitlements */,
+				263A9C9625F084EC00C9DB7F /* ScreenSharingBroadcastRelease.entitlements */,
+			);
+			path = ScreenSharingBroadcast;
+			sourceTree = "<group>";
+		};
+		266DCB382692F47500B2AA38 /* TokenBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				266DCB392692F47500B2AA38 /* TokenBuilder.m */,
+				266DCB3A2692F47500B2AA38 /* TokenBuilder.h */,
+				266DCB3B2692F47500B2AA38 /* RtmTokenTool */,
+			);
+			path = TokenBuilder;
+			sourceTree = "<group>";
+		};
+		266DCB3B2692F47500B2AA38 /* RtmTokenTool */ = {
+			isa = PBXGroup;
+			children = (
+				266DCB3C2692F47500B2AA38 /* RtmTokenTool.h */,
+				266DCB3D2692F47500B2AA38 /* RtmTokenTool.mm */,
+				266DCB3E2692F47500B2AA38 /* src */,
+			);
+			path = RtmTokenTool;
+			sourceTree = "<group>";
+		};
+		266DCB3E2692F47500B2AA38 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				266DCB3F2692F47500B2AA38 /* utils.h */,
+				266DCB402692F47500B2AA38 /* md5 */,
+				266DCB432692F47500B2AA38 /* DynamicKey5.h */,
+				266DCB442692F47500B2AA38 /* Packer.h */,
+				266DCB452692F47500B2AA38 /* generatorSignalToken.h */,
+				266DCB462692F47500B2AA38 /* AccessToken.h */,
+				266DCB472692F47500B2AA38 /* DynamicKey2.h */,
+				266DCB482692F47500B2AA38 /* RtmTokenBuilder.h */,
+				266DCB492692F47500B2AA38 /* DynamicKey3.h */,
+				266DCB4A2692F47500B2AA38 /* generatorSignalToken-Linux.h */,
+				266DCB4B2692F47500B2AA38 /* RtcTokenBuilder.h */,
+				266DCB4C2692F47500B2AA38 /* DynamicKey.h */,
+				266DCB4D2692F47500B2AA38 /* DynamicKey4.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		266DCB402692F47500B2AA38 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				266DCB412692F47500B2AA38 /* md5.cpp */,
+				266DCB422692F47500B2AA38 /* md5.h */,
+			);
+			path = md5;
+			sourceTree = "<group>";
+		};
+		267404B026A6C4B7009345D3 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				267404B826A6C51C009345D3 /* ScoreAlertVC.swift */,
+				267404B726A6C51C009345D3 /* ScoreStarView.swift */,
+				267404B626A6C51C009345D3 /* ScoreView.swift */,
+			);
+			path = Score;
+			sourceTree = "<group>";
+		};
+		2674FC8926A170A700DAFB78 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				267404B126A6C508009345D3 /* ScoreStarView.xib */,
+				2674FC8E26A171F800DAFB78 /* SelectedNotiTypeView.xib */,
+				26E4001726957FE100255041 /* AboutView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		268EE670265E4C3900D595B7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				26E400202695805700255041 /* View */,
+				26E40013269554CC00255041 /* LoginSetVC.swift */,
+				268EE67F265E4C7200D595B7 /* LoginVC.swift */,
+				26E400252695811700255041 /* AboutVC.swift */,
+				268EE680265E4C7200D595B7 /* LoginVM.swift */,
+				26E400D126958F0700255041 /* BrowseVC.swift */,
+				268EE689265E4F5D00D595B7 /* BaseViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		26B6E03026A689CA008B28B1 /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				2685A835269D799A007E7F1B /* TermsAndPolicyView.swift */,
+				2685A831269D7990007E7F1B /* TermsAndPolicyVC.swift */,
+			);
+			path = Policy;
+			sourceTree = "<group>";
+		};
+		26C894152664DFF00086317B /* KeyCenter */ = {
+			isa = PBXGroup;
+			children = (
+				26C894172664DFF00086317B /* KeyCenter.h */,
+				26C894162664DFF00086317B /* KeyCenter.m */,
+			);
+			path = KeyCenter;
+			sourceTree = "<group>";
+		};
+		26C93FF1260DE559002D6F70 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2674FC8926A170A700DAFB78 /* Xib */,
+				2685A844269D7DF7007E7F1B /* Policy.strings */,
+				26B6E02926A6822F008B28B1 /* privacy_cn.html */,
+				26B6E02826A6822F008B28B1 /* privacy_en.html */,
+				26E400F12695902300255041 /* disclaimer_cn.html */,
+				26E400F22695902300255041 /* disclaimer_en.html */,
+				2685A839269D79F6007E7F1B /* Policy.storyboard */,
+				263A9D1925F099F900C9DB7F /* Agora Meeting.entitlements */,
+				78F2325525F0D6BF0035B3D6 /* Agora MeetingDebug.entitlements */,
+				780356132465706D001F9624 /* Localizable.strings */,
+				784D20A82463EB820065985A /* Assets.xcassets */,
+				784D20AD2463EB820065985A /* Info.plist */,
+				784D20AA2463EB820065985A /* LaunchScreen.storyboard */,
+				784D20A52463EB810065985A /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		26CE406126A6D996003F8E96 /* SheetVC */ = {
+			isa = PBXGroup;
+			children = (
+				26B6E03026A689CA008B28B1 /* Policy */,
+				26CE406226A6D9AE003F8E96 /* SelectedNoti */,
+				267404B026A6C4B7009345D3 /* Score */,
+			);
+			path = SheetVC;
+			sourceTree = "<group>";
+		};
+		26CE406226A6D9AE003F8E96 /* SelectedNoti */ = {
+			isa = PBXGroup;
+			children = (
+				2674FC8A26A1711D00DAFB78 /* SelectedNotiTypeView.swift */,
+				2674FC8326A16FC700DAFB78 /* SelectedNotiTypeVC.swift */,
+			);
+			path = SelectedNoti;
+			sourceTree = "<group>";
+		};
+		26CE406526A6D9EC003F8E96 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				268EE6A0265E529100D595B7 /* StorageManager.swift */,
+				2674FA4F269E945C00DAFB78 /* MeetingServerApi.swift */,
+				268EE6A4265E582D00D595B7 /* Extensions.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		26D71759263AF74800786A58 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				26CE406526A6D9EC003F8E96 /* Other */,
+				268EE670265E4C3900D595B7 /* Login */,
+				26CE406126A6D996003F8E96 /* SheetVC */,
+				266DCB382692F47500B2AA38 /* TokenBuilder */,
+				268EE577265E392400D595B7 /* VideoConference-Bridging-Header.h */,
+				784D20AE2463EB820065985A /* main.m */,
+				784D22462464159D0065985A /* AppDelegate.h */,
+				784D22482464159D0065985A /* AppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		26E400202695805700255041 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26E400212695807D00255041 /* AboutView.swift */,
+				268EE67D265E4C7200D595B7 /* LoginTipsView.swift */,
+				26D124D5267059A7009ABE14 /* TextFieldCustomClear.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		784D20902463EB810065985A = {
+			isa = PBXGroup;
+			children = (
+				784D209B2463EB810065985A /* VideoConference */,
+				263A9C7D25EFAB2900C9DB7F /* ScreenSharingBroadcast */,
+				784D209A2463EB810065985A /* Products */,
+				A8B48E9A84BD08BF65361EA2 /* Pods */,
+				A3EAD3282BE9A6A2366A3EA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		784D209A2463EB810065985A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				784D20992463EB810065985A /* Agora Meeting.app */,
+				263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		784D209B2463EB810065985A /* VideoConference */ = {
+			isa = PBXGroup;
+			children = (
+				26C894152664DFF00086317B /* KeyCenter */,
+				26D71759263AF74800786A58 /* App */,
+				26C93FF1260DE559002D6F70 /* Resource */,
+			);
+			path = VideoConference;
+			sourceTree = "<group>";
+		};
+		A3EAD3282BE9A6A2366A3EA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				267C774325A6F37E00D93422 /* SystemConfiguration.framework */,
+				267C774125A6F37600D93422 /* VideoToolbox.framework */,
+				267C773F25A6F37000D93422 /* CoreTelephony.framework */,
+				267C773D25A6F36800D93422 /* CoreMedia.framework */,
+				267C773B25A6F36000D93422 /* AVFoundation.framework */,
+				267C773925A6F35900D93422 /* AudioToolbox.framework */,
+				267C773725A6F35100D93422 /* Accelerate.framework */,
+				267C773525A6F34700D93422 /* CoreML.framework */,
+				0BC5E4E14A0F3AD5CA151FEA /* Pods_VideoConference.framework */,
+				263A9C7B25EFAB2900C9DB7F /* ReplayKit.framework */,
+				80B07C58FB76CB543251CB17 /* Pods_ScreenSharingBroadcast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8B48E9A84BD08BF65361EA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E518D6B1D22836E711436D1A /* Pods-VideoConference.debug.xcconfig */,
+				FEC05613756A2D985355EFEC /* Pods-VideoConference.release.xcconfig */,
+				A3AA1CDDED4E961CF4E62543 /* Pods-VideoConference.devrelease.xcconfig */,
+				EE07238783FA1EC3CA49D426 /* Pods-VideoConference.qarelease.xcconfig */,
+				B04D7D656E6E637C1102C29D /* Pods-VideoConference.debug copy.xcconfig */,
+				8DFC4C50A584CD14238C244C /* Pods-ScreenSharingBroadcast.debug.xcconfig */,
+				4BB898E0BE81465537EDD455 /* Pods-ScreenSharingBroadcast.release.xcconfig */,
+				387BD497FFADE8B0DA2F07D0 /* Pods-ScreenSharingBroadcast.devrelease.xcconfig */,
+				57C75254526E4BA3DA87C8E5 /* Pods-ScreenSharingBroadcast.qarelease.xcconfig */,
+				D6AB445B4E9BE9419C8F4FBC /* Pods-ScreenSharingBroadcast.prerelease.xcconfig */,
+				3351E940BF7FF5EA8FD55946 /* Pods-VideoConference.prerelease.xcconfig */,
+				FA8287D621E14DA781DA4EF5 /* Pods-ScreenSharingBroadcast.testflightdevenv.xcconfig */,
+				80C352DBEAE9089B6E16EB89 /* Pods-VideoConference.testflightdevenv.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		263A9C7925EFAB2900C9DB7F /* ScreenSharingBroadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263A9C8425EFAB2900C9DB7F /* Build configuration list for PBXNativeTarget "ScreenSharingBroadcast" */;
+			buildPhases = (
+				D993C7D4E220F9E58CD3FC92 /* [CP] Check Pods Manifest.lock */,
+				263A9C7625EFAB2900C9DB7F /* Sources */,
+				263A9C7725EFAB2900C9DB7F /* Frameworks */,
+				263A9C7825EFAB2900C9DB7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenSharingBroadcast;
+			productName = ScreenSharingBroadcast;
+			productReference = 263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		784D20982463EB810065985A /* VideoConference */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784D20B22463EB820065985A /* Build configuration list for PBXNativeTarget "VideoConference" */;
+			buildPhases = (
+				1AA1246DAFFF959B4AE50917 /* [CP] Check Pods Manifest.lock */,
+				784D20952463EB810065985A /* Sources */,
+				784D20962463EB810065985A /* Frameworks */,
+				784D20972463EB810065985A /* Resources */,
+				263A9C8925EFAB2900C9DB7F /* Embed App Extensions */,
+				26D7145E2637B98400786A58 /* ShellScript */,
+				CC495E8F94C89C6D354FCFF0 /* [CP] Embed Pods Frameworks */,
+				4DC023B2A53067905EAF88AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				263A9C8225EFAB2900C9DB7F /* PBXTargetDependency */,
+			);
+			name = VideoConference;
+			productName = VideoConference;
+			productReference = 784D20992463EB810065985A /* Agora Meeting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		784D20912463EB810065985A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = agora;
+				TargetAttributes = {
+					263A9C7925EFAB2900C9DB7F = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					784D20982463EB810065985A = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = 784D20942463EB810065985A /* Build configuration list for PBXProject "VideoConference" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 784D20902463EB810065985A;
+			productRefGroup = 784D209A2463EB810065985A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				784D20982463EB810065985A /* VideoConference */,
+				263A9C7925EFAB2900C9DB7F /* ScreenSharingBroadcast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		263A9C7825EFAB2900C9DB7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784D20972463EB810065985A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2685A83B269D79F6007E7F1B /* Policy.storyboard in Resources */,
+				2674FC9026A171F800DAFB78 /* SelectedNotiTypeView.xib in Resources */,
+				26B6E02B26A6822F008B28B1 /* privacy_cn.html in Resources */,
+				26E4001926957FE100255041 /* AboutView.xib in Resources */,
+				266DC9A7268DDB5400B2AA38 /* Main.storyboard in Resources */,
+				2685A846269D7DF7007E7F1B /* Policy.strings in Resources */,
+				26E400F32695902300255041 /* disclaimer_cn.html in Resources */,
+				780356112465706D001F9624 /* Localizable.strings in Resources */,
+				267404B326A6C508009345D3 /* ScoreStarView.xib in Resources */,
+				784D20AC2463EB820065985A /* LaunchScreen.storyboard in Resources */,
+				26B6E02A26A6822F008B28B1 /* privacy_en.html in Resources */,
+				26E400F42695902300255041 /* disclaimer_en.html in Resources */,
+				784D20A92463EB820065985A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AA1246DAFFF959B4AE50917 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoConference-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26D7145E2637B98400786A58 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n#if [ $CONFIGURATION == Release ]; then\n    buildTime=`date +\\%Y.\\%m.\\%d`\n    /usr/libexec/PlistBuddy -c \"Set :AppBuildTime $buildTime\" \"$INFOPLIST_FILE\"\n#fi\n";
+		};
+		4DC023B2A53067905EAF88AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC495E8F94C89C6D354FCFF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D993C7D4E220F9E58CD3FC92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenSharingBroadcast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		263A9C7625EFAB2900C9DB7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8690D8CE25F742E700FF8251 /* SampleHandler.swift in Sources */,
+				265BA51C25F0FD6500FAB352 /* AgoraUploader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784D20952463EB810065985A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268EE684265E4C7200D595B7 /* LoginVM.swift in Sources */,
+				266DCB4F2692F47500B2AA38 /* RtmTokenTool.mm in Sources */,
+				268EE683265E4C7200D595B7 /* LoginVC.swift in Sources */,
+				2674FA50269E945C00DAFB78 /* MeetingServerApi.swift in Sources */,
+				784D20AF2463EB820065985A /* main.m in Sources */,
+				267404BA26A6C51C009345D3 /* ScoreStarView.swift in Sources */,
+				2674FC8426A16FC700DAFB78 /* SelectedNotiTypeVC.swift in Sources */,
+				2685A832269D7990007E7F1B /* TermsAndPolicyVC.swift in Sources */,
+				26E400222695807D00255041 /* AboutView.swift in Sources */,
+				26D124D6267059A7009ABE14 /* TextFieldCustomClear.swift in Sources */,
+				266DCB4E2692F47500B2AA38 /* TokenBuilder.m in Sources */,
+				268EE6A1265E529100D595B7 /* StorageManager.swift in Sources */,
+				268EE6A5265E582D00D595B7 /* Extensions.swift in Sources */,
+				266DCB502692F47500B2AA38 /* md5.cpp in Sources */,
+				268EE681265E4C7200D595B7 /* LoginTipsView.swift in Sources */,
+				2685A836269D799A007E7F1B /* TermsAndPolicyView.swift in Sources */,
+				268EE68A265E4F5D00D595B7 /* BaseViewController.swift in Sources */,
+				26E400262695811700255041 /* AboutVC.swift in Sources */,
+				2674FC8B26A1711D00DAFB78 /* SelectedNotiTypeView.swift in Sources */,
+				267404BB26A6C51C009345D3 /* ScoreAlertVC.swift in Sources */,
+				26E400D226958F0700255041 /* BrowseVC.swift in Sources */,
+				267404B926A6C51C009345D3 /* ScoreView.swift in Sources */,
+				26C8941D2664E2620086317B /* KeyCenter.m in Sources */,
+				784D224B2464159D0065985A /* AppDelegate.m in Sources */,
+				26E40014269554CC00255041 /* LoginSetVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		263A9C8225EFAB2900C9DB7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 263A9C7925EFAB2900C9DB7F /* ScreenSharingBroadcast */;
+			targetProxy = 263A9C8125EFAB2900C9DB7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		267404B126A6C508009345D3 /* ScoreStarView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267404B226A6C508009345D3 /* Base */,
+				2674050526A6D4E4009345D3 /* en */,
+				2674050726A6D4E6009345D3 /* zh-Hans */,
+			);
+			name = ScoreStarView.xib;
+			sourceTree = "<group>";
+		};
+		2674FC8E26A171F800DAFB78 /* SelectedNotiTypeView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2674FC8F26A171F800DAFB78 /* Base */,
+				2674FC9326A1720200DAFB78 /* en */,
+				2674FC9426A1720500DAFB78 /* zh-Hans */,
+			);
+			name = SelectedNotiTypeView.xib;
+			sourceTree = "<group>";
+		};
+		2685A839269D79F6007E7F1B /* Policy.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2685A83A269D79F6007E7F1B /* Base */,
+			);
+			name = Policy.storyboard;
+			sourceTree = "<group>";
+		};
+		2685A844269D7DF7007E7F1B /* Policy.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2685A845269D7DF7007E7F1B /* zh-Hans */,
+				2685A849269D7E00007E7F1B /* en */,
+			);
+			name = Policy.strings;
+			sourceTree = "<group>";
+		};
+		26E4001726957FE100255041 /* AboutView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26E4001826957FE100255041 /* Base */,
+				26E4001C26957FEA00255041 /* en */,
+				26E4001D26957FEC00255041 /* zh-Hans */,
+			);
+			name = AboutView.xib;
+			sourceTree = "<group>";
+		};
+		780356132465706D001F9624 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				780356122465706D001F9624 /* en */,
+				7803561424657070001F9624 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		784D20A52463EB810065985A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				784D20A62463EB810065985A /* Base */,
+				266DC9A0268DDA2200B2AA38 /* en */,
+				266DC9A2268DDA5400B2AA38 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		784D20AA2463EB820065985A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				784D20AB2463EB820065985A /* Base */,
+				266DC99C268DDA0300B2AA38 /* zh-Hans */,
+				266DC99E268DDA0500B2AA38 /* en */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		260DC2B5269BEA370046F645 /* TestFlightDevEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "TestFlightDevEnv=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = TestFlightDevEnv;
+		};
+		260DC2B6269BEA370046F645 /* TestFlightDevEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80C352DBEAE9089B6E16EB89 /* Pods-VideoConference.testflightdevenv.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "VideoConference/Resource/Agora Meeting.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel-framework/YYModel.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Whiteboard\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/dsBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/AgoraRtcKit\"",
+				);
+				INFOPLIST_FILE = VideoConference/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D TestFlightDevEnv";
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal;
+				PRODUCT_NAME = "Agora Meeting";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetinginternalDev;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoConference/App/VideoConference-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = TestFlightDevEnv;
+		};
+		260DC2B7269BEA370046F645 /* TestFlightDevEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8287D621E14DA781DA4EF5 /* Pods-ScreenSharingBroadcast.testflightdevenv.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenSharingBroadcast/ScreenSharingBroadcastRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoConference",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraLog/AgoraLog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraRte/AgoraRte.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Armin/Armin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"$(PROJECT_DIR)/VideoConference/AgoraRte.framework/Headers",
+				);
+				INFOPLIST_FILE = ScreenSharingBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal.Broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetingInternalBroadcastDev;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TestFlightDevEnv;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = TestFlightDevEnv;
+		};
+		263A9C8525EFAB2900C9DB7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFC4C50A584CD14238C244C /* Pods-ScreenSharingBroadcast.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenSharingBroadcast/ScreenSharingBroadcastDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoConference",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraLog/AgoraLog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraRte/AgoraRte.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Armin/Armin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"$(PROJECT_DIR)/VideoConference/AgoraRte.framework/Headers",
+				);
+				INFOPLIST_FILE = ScreenSharingBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal.Broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetingInternalBroadcastDev;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		263A9C8625EFAB2900C9DB7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB898E0BE81465537EDD455 /* Pods-ScreenSharingBroadcast.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenSharingBroadcast/ScreenSharingBroadcastRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoConference",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraLog/AgoraLog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraRte/AgoraRte.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Armin/Armin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"$(PROJECT_DIR)/VideoConference/AgoraRte.framework/Headers",
+				);
+				INFOPLIST_FILE = ScreenSharingBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal.Broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetingInternalBroadcastDis;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		263A9C8725EFAB2900C9DB7F /* DevRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387BD497FFADE8B0DA2F07D0 /* Pods-ScreenSharingBroadcast.devrelease.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenSharingBroadcast/ScreenSharingBroadcastRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoConference",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraLog/AgoraLog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraRte/AgoraRte.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Armin/Armin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"$(PROJECT_DIR)/VideoConference/AgoraRte.framework/Headers",
+				);
+				INFOPLIST_FILE = ScreenSharingBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal.Broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetingInternalBroadcastDev;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = DevRelease;
+		};
+		263A9C8825EFAB2900C9DB7F /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AB445B4E9BE9419C8F4FBC /* Pods-ScreenSharingBroadcast.prerelease.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenSharingBroadcast/ScreenSharingBroadcast.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoConference",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraLog/AgoraLog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AgoraRte/AgoraRte.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Armin/Armin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"$(PROJECT_DIR)/VideoConference/AgoraRte.framework/Headers",
+				);
+				INFOPLIST_FILE = ScreenSharingBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal.Broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetingInternalBroadcastDis;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = PreRelease;
+		};
+		784D20B02463EB820065985A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		784D20B12463EB820065985A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		784D20B32463EB820065985A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E518D6B1D22836E711436D1A /* Pods-VideoConference.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "VideoConference/Resource/Agora MeetingDebug.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel-framework/YYModel.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Whiteboard\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/dsBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/AgoraRtcKit\"",
+				);
+				INFOPLIST_FILE = VideoConference/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal;
+				PRODUCT_NAME = "Agora Meeting";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetinginternalDev;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoConference/App/VideoConference-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		784D20B42463EB820065985A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC05613756A2D985355EFEC /* Pods-VideoConference.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "VideoConference/Resource/Agora Meeting.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel-framework/YYModel.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Whiteboard\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/dsBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/AgoraRtcKit\"",
+				);
+				INFOPLIST_FILE = VideoConference/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal;
+				PRODUCT_NAME = "Agora Meeting";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetinginternalDis;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoConference/App/VideoConference-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7887589C247E20C5008ACBA5 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PreRelease;
+		};
+		7887589D247E20C5008ACBA5 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3351E940BF7FF5EA8FD55946 /* Pods-VideoConference.prerelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "VideoConference/Resource/Agora Meeting.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel-framework/YYModel.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Whiteboard\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/dsBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/AgoraRtcKit\"",
+				);
+				INFOPLIST_FILE = VideoConference/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D PreRelease";
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal;
+				PRODUCT_NAME = "Agora Meeting";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetinginternalDis;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoConference/App/VideoConference-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = PreRelease;
+		};
+		7887589E247E20F0008ACBA5 /* DevRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = DevRelease;
+		};
+		7887589F247E20F0008ACBA5 /* DevRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AA1CDDED4E961CF4E62543 /* Pods-VideoConference.devrelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "VideoConference/Resource/Agora Meeting.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B8R842N6FS;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel-framework/YYModel.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Whiteboard\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/dsBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/AgoraRtcKit\"",
+				);
+				INFOPLIST_FILE = VideoConference/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DevRelease";
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.AgoraMeetingInternal;
+				PRODUCT_NAME = "Agora Meeting";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraMeetinginternalDev;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoConference/App/VideoConference-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = DevRelease;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		263A9C8425EFAB2900C9DB7F /* Build configuration list for PBXNativeTarget "ScreenSharingBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263A9C8525EFAB2900C9DB7F /* Debug */,
+				263A9C8625EFAB2900C9DB7F /* Release */,
+				260DC2B7269BEA370046F645 /* TestFlightDevEnv */,
+				263A9C8725EFAB2900C9DB7F /* DevRelease */,
+				263A9C8825EFAB2900C9DB7F /* PreRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		784D20942463EB810065985A /* Build configuration list for PBXProject "VideoConference" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784D20B02463EB820065985A /* Debug */,
+				784D20B12463EB820065985A /* Release */,
+				260DC2B5269BEA370046F645 /* TestFlightDevEnv */,
+				7887589E247E20F0008ACBA5 /* DevRelease */,
+				7887589C247E20C5008ACBA5 /* PreRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		784D20B22463EB820065985A /* Build configuration list for PBXNativeTarget "VideoConference" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784D20B32463EB820065985A /* Debug */,
+				784D20B42463EB820065985A /* Release */,
+				260DC2B6269BEA370046F645 /* TestFlightDevEnv */,
+				7887589F247E20F0008ACBA5 /* DevRelease */,
+				7887589D247E20C5008ACBA5 /* PreRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 784D20912463EB810065985A /* Project object */;
+}

@@ -1,0 +1,44 @@
+//* Login *
+login_t0 = "Please enter the room name";
+login_t1 = "Please enter the user name";
+login_t2 = "Room name min length is 3 characters";
+login_t3 = "User name min length is 3 characters";
+login_t4 = "Room name max length is 50 characters";
+login_t5 = "User name max length is 20 characters";
+login_t6 = "Password max length is 50 characters";
+login_t7 = "Update";
+login_t8 = "Enter failed";
+login_t9 = "Agora Meeting has a new version";
+login_t10 = "• When the room already exists, you need to enter the correct password";
+login_t11 = "• When the room does not exist, the password entered will become the password of this room";
+login_t12 = "• The room can be without password";
+
+loginSet_t1 = "Settings";
+loginSet_t2 = "About";
+loginSet_t3 = "Turn off  in/out notifications";
+
+/** About **/
+ab_t1 = "Product disclaimer";
+ab_t2 = "About";
+ab_t3 = "Privacy policy";
+ab_t4 = "Agora Privacy policy";
+ab_t5 = "Version:V";
+ab_t6 = ",Release Time:";
+ab_t7 = "RTC SDK Version:V";
+ab_t8 = ",RTM SDK Version:V";
+ab_t9 = "WhiteBoard Version:V";
+
+noti_t1 = "Always mute";
+noti_t2 = "and above";
+noti_t3 = "Never mute";
+
+/** score **/
+score_t1 = "Call Quality";
+score_t2 = "Function Completeness";
+score_t3 = "General Experience";
+score_t4 = "Comment";
+score_t5 = "Comment";
+score_t6 = "Submit";
+score_t7 = "Share your experience";
+score_t8 = " Star";
+

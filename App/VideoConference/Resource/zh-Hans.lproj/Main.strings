@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "单次会议最长45分钟"; ObjectID = "1AM-WD-lMY"; */
+"1AM-WD-lMY.text" = "单次会议最长45分钟";
+
+/* Class = "UILabel"; text = "入会前设置"; ObjectID = "I2X-h9-DPf"; */
+"I2X-h9-DPf.text" = "入会前设置";
+
+/* Class = "UILabel"; text = "Agora Meeting"; ObjectID = "IkA-dQ-vmw"; */
+"IkA-dQ-vmw.text" = "Agora Meeting";
+
+/* Class = "UIButton"; normalTitle = "进入"; ObjectID = "Klf-cJ-JYB"; */
+"Klf-cJ-JYB.normalTitle" = "进入";
+
+/* Class = "UITextField"; placeholder = "房间名"; ObjectID = "g3r-5r-cD6"; */
+"g3r-5r-cD6.placeholder" = "房间名";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "gET-Fg-242"; */
+"gET-Fg-242.placeholder" = "密码";
+
+/* Class = "UILabel"; text = "打开摄像头"; ObjectID = "krf-AB-olW"; */
+"krf-AB-olW.text" = "打开摄像头";
+
+/* Class = "UILabel"; text = "打开麦克风"; ObjectID = "rAi-BB-Dxj"; */
+"rAi-BB-Dxj.text" = "打开麦克风";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "zGl-eb-B4B"; */
+"zGl-eb-B4B.placeholder" = "用户名";

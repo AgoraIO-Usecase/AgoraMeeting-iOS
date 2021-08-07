@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+workspace 'VideoConference.xcworkspace'
+
+target 'VideoConference' do
+  use_frameworks!
+  pod 'AgoraMeetingSDK', '1.0.0'
+  pod 'AgoraSceneStatistic'
+  pod 'OpenSSL-Universal', '1.0.2.17'
+  pod 'Bugly'
+end
+
+target 'ScreenSharingBroadcast' do
+  use_frameworks!
+  pod 'AgoraRtcEngine_iOS', '3.4.5'
+end

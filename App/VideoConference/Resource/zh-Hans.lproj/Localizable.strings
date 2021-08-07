@@ -1,0 +1,43 @@
+//* Login *
+login_t0 = "请输入房间名";
+login_t1 = "请输入用户名";
+login_t2 = "房间名必须不小于3位";
+login_t3 = "用户名必须不小于3位";
+login_t4 = "房间名最多为50个字符";
+login_t5 = "用户名最多为20个字符";
+login_t6 = "密码最多为20个字符";
+login_t7 = "更新";
+login_t8 = "进入失败";
+login_t9 = "Agora Meeting 有了新版本";
+login_t10 = "• 房间已存在时，需要输入正确的密码";
+login_t11 = "• 房间不存在时，输入的密码将成为这个房间的密码";
+login_t12 = "• 房间可以不设置密码";
+
+loginSet_t1 = "设置";
+loginSet_t2 = "关于";
+loginSet_t3 = "关闭进出通知";
+
+ab_t1 = "免责声明";
+ab_t2 = "关于";
+ab_t3 = "隐私政策";
+ab_t4 = "Agora隐私政策";
+ab_t5 = "版本号：V";
+ab_t6 = "，发版时间：";
+ab_t7 = "RTC SDK版本号：V";
+ab_t8 = "，RTM SDK版本：V";
+ab_t9 = "白板版本号：V";
+
+noti_t1 = "总是关闭";
+noti_t2 = "人以上";
+noti_t3 = "总是开启";
+
+/** score **/
+score_t1 = "音视频质量";
+score_t2 = "功能完整性";
+score_t3 = "使用体验";
+score_t4 = "评价";
+score_t5 = "撰写评价";
+score_t6 = "提交";
+score_t7 = "分享您的体验心得";
+score_t8 = "星";
+
