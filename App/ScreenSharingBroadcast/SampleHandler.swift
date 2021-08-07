@@ -51,7 +51,7 @@ class SampleHandler: RPBroadcastSampleHandler {
     
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
         
-        let userDefault = UserDefaults.init(suiteName: "group.io.agora.meetingInternal")
+        let userDefault = UserDefaults.init(suiteName: <#appGroupId#>)
         guard let appid = userDefault?.object(forKey: "appid") as? String else {
             return
         }

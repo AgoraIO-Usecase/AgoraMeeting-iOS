@@ -77,12 +77,6 @@ class LoginVC: BaseViewController {
         
         vm.checkUpdate()
         
-        #if DEBUG
-        roomNameTextField.text = StorageManager.roomName
-        #elseif TestFlightDevEnv
-        roomNameTextField.text = StorageManager.roomName
-        #endif
-        
         roomNameTextField.delegate = self
         roomPsdTextField.delegate = self
         userNameTextField.delegate = self

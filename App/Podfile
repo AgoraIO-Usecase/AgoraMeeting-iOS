@@ -5,7 +5,7 @@ workspace 'VideoConference.xcworkspace'
 
 target 'VideoConference' do
   use_frameworks!
-  pod 'AgoraMeetingSDK', '1.0.0'
+  pod 'AgoraMeetingSDK'
   pod 'AgoraSceneStatistic'
   pod 'OpenSSL-Universal', '1.0.2.17'
   pod 'Bugly'

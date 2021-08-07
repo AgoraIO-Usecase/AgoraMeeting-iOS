@@ -493,7 +493,7 @@
 				263A9C8925EFAB2900C9DB7F /* Embed App Extensions */,
 				26D7145E2637B98400786A58 /* ShellScript */,
 				CC495E8F94C89C6D354FCFF0 /* [CP] Embed Pods Frameworks */,
-				4DC023B2A53067905EAF88AE /* [CP] Copy Pods Resources */,
+				64C5379AFEA4A08DCA0FB663 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -615,7 +615,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n#if [ $CONFIGURATION == Release ]; then\n    buildTime=`date +\\%Y.\\%m.\\%d`\n    /usr/libexec/PlistBuddy -c \"Set :AppBuildTime $buildTime\" \"$INFOPLIST_FILE\"\n#fi\n";
 		};
-		4DC023B2A53067905EAF88AE /* [CP] Copy Pods Resources */ = {
+		64C5379AFEA4A08DCA0FB663 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
