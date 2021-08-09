@@ -75,7 +75,13 @@ extension MainRenderVM {
         let token = screenInfo.token
         let channnelId = screenInfo.channnelId
         let appId = screenInfo.appId
-        let userDefault = UserDefaults(suiteName: "group.io.agora.meetingInternal")
+        let infoDict = Bundle.main.infoDictionary
+        let temp = infoDict?["AppGroupId"] as? String
+        if temp == nil {
+            Log.errorText(text: "did not set AppGroupId in info.plist")
+        }
+        let appGroupId = temp ?? "group.io.agora.meetingInternal"
+        let userDefault = UserDefaults(suiteName: appGroupId)
         userDefault?.setValue(appId, forKey: "appid")
         userDefault?.setValue(screenId, forKey: "screenid")
         userDefault?.setValue(token, forKey: "token")

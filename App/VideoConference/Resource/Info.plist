@@ -4,6 +4,8 @@
 <dict>
 	<key>AppBuildTime</key>
 	<string>2021.08.07</string>
+	<key>AppGroupId</key>
+	<string>your group Id</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
