@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source_files = 'SDK/AgoraMeetingSDK/AgoraMeetingSDK/MeetingSDK.swift'
   s.static_framework = true
   s.swift_versions = "5.0"
-  s.dependency 'AgoraMeetingUI', '1.0.0'
+  s.dependency 'AgoraMeetingUI', '>= 1.0.1'
 end
 
 
