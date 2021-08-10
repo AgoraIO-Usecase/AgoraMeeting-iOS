@@ -141,7 +141,7 @@ class LoginVM: NSObject {
     }
     
     var host: String {
-        return <#host#>
+        return "https://api.agora.io"
     }
     
     func submitScore(score: ASScore) {
