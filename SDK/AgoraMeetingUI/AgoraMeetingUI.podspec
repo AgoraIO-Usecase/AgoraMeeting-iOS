@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AgoraMeetingUI'
-  s.version          = '1.0.1'
+  s.version          = '1.0.1.1'
   s.summary          = 'AgoraMeetingUI'
   s.homepage         = 'https://agora.io'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'AgoraMeetingUI' => ['SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Image/*.xcassets', 'SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Xib/**/*', 'SDK/AgoraMeetingUI/AgoraMeetingUI/Assets/Localizable/*.lproj/*.strings', 'AgoraMeetingUI/Assets/Other/*']
   }
-  s.static_framework = true
   s.swift_versions = "5.0"
   s.dependency 'Presentr'
   s.dependency 'Toast-Swift'

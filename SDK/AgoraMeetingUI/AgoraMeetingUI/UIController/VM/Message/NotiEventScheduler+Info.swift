@@ -30,11 +30,12 @@ extension NotiEventScheduler {
             count = 0
         }
         
-        init(noti: NotifyMessage) {
+        init(noti: NotifyMessage,
+             showTime: Bool) {
             self.id = noti.messageId
             self.type = noti.type
             self.sender = noti.sender
-            self.showTime = noti.showTime
+            self.showTime = showTime
             self.count = (noti.type == .userApproveApplyCam || noti.type == .userApproveApplyMic) ? 20 : 0
             self.actionSuccess = false
             self.timestamp = noti.timestamp

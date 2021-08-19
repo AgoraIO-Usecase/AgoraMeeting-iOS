@@ -10,32 +10,35 @@ import UIKit
 extension MainRenderUIController {
     func registerCell() {
         let whiteBoardCellClass = WhiteBoardCell.self
-        let videoNib = UINib(nibName: videoCellIdf,
-                             bundle: .meetingUI())
         let audioNib = UINib(nibName: audioCellIdf,
                              bundle: .meetingUI())
-        let videoMiniNib = UINib(nibName: videoMiniIdf,
-                                 bundle: .meetingUI())
         
         view.collectionViewVideo.register(whiteBoardCellClass,
                                           forCellWithReuseIdentifier: whiteBoardCellIdf)
         view.videoScrollView.collectionView.register(whiteBoardCellClass,
                                                      forCellWithReuseIdentifier: whiteBoardCellIdf)
-        view.collectionViewVideo.register(videoNib,
-                                          forCellWithReuseIdentifier: videoCellIdf)
+        
+        view.collectionViewVideo.register(VideoCellRemote.self, forCellWithReuseIdentifier: videoCellIdfRemote)
+        view.collectionViewVideo.register(VideoCellLocal.self, forCellWithReuseIdentifier: videoCellIdfLocal)
+        
+        
         view.collectionViewAudio.register(audioNib,
                                           forCellWithReuseIdentifier: audioCellIdf)
-        view.videoScrollView.collectionView.register(videoMiniNib,
-                                                     forCellWithReuseIdentifier: videoMiniIdf)
+        view.videoScrollView.collectionView.register(VideoCellMiniLocal.self,
+                                                     forCellWithReuseIdentifier: videoMiniIdfLocal)
+        view.videoScrollView.collectionView.register(VideoCellMiniRemote.self,
+                                                     forCellWithReuseIdentifier: videoMiniIdfRemote)
     }
 }
 
 extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     fileprivate var whiteBoardCellIdf: String { "WhiteBoardCell" }
-    fileprivate var videoCellIdf: String { "VideoCell" }
+    fileprivate var videoCellIdfRemote: String { "VideoCellRemote" }
+    fileprivate var videoCellIdfLocal: String { "VideoCellLocal" }
     fileprivate var audioCellIdf: String { "AudioCell" }
-    fileprivate var videoMiniIdf: String { "VideoCellMini" }
+    fileprivate var videoMiniIdfLocal: String { "VideoCellMiniLocal" }
+    fileprivate var videoMiniIdfRemote: String { "VideoCellMiniRemote" }
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
@@ -50,14 +53,15 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
             let info = data.videoCellMiniInfos[indexPath.row]
             switch info.type {
             case .video:
+                let idf = info.isMe ? videoMiniIdfLocal : videoMiniIdfRemote
                 let cell = collectionView
-                    .dequeueReusableCell(withReuseIdentifier: videoMiniIdf,
+                    .dequeueReusableCell(withReuseIdentifier: idf,
                                          for: indexPath) as! VideoCellMini
                 cell.config(info: info)
                 return cell
             case .screen:
                 let cell = collectionView
-                    .dequeueReusableCell(withReuseIdentifier: videoMiniIdf,
+                    .dequeueReusableCell(withReuseIdentifier: videoMiniIdfRemote,
                                          for: indexPath) as! VideoCellMini
                 cell.config(info: info)
                 return cell
@@ -78,9 +82,10 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
             return cell
         }
         else { /** 视频平铺 **/
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoCellIdf,
-                                                          for: indexPath) as! VideoCell
             let info = data.videoCellInfos[indexPath.row]
+            let idf = info.isMe ? videoCellIdfLocal : videoCellIdfRemote
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idf,
+                                                          for: indexPath) as! VideoCell
             cell.config(info: info)
             cell.delegate = self
             return cell
@@ -93,24 +98,25 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
         
         if view.collectionViewVideo == collectionView,
            let `cell` = cell as? VideoCell,
-           let info = cell.getInfo, !info.showHeadImage { /** 视频平铺 **/
+           let info = cell.info,
+           info.hasVideo { /** 视频平铺 **/
             vm.subscriptVideo(streamId: info.streamId,
                               view: cell.videoView,
                               isHighStream: true)
             return
         }
         
-        if let `cell` = cell as? VideoCellMini,
-           let info = cell.getInfo { /** 底部列表 **/
+        if view.videoScrollView.collectionView == collectionView,
+           let `cell` = cell as? VideoCellMini,
+           let info = cell.infoMini { /** 底部列表 **/
             switch info.type {
             case .video:
-                if !info.showHeadImage {
+                if info.hasVideo {
                     vm.subscriptVideo(streamId: info.streamId,
                                       view: cell.videoView,
                                       isHighStream: false)
                 }
                 break
-                
             case .screen:
                 if !info.isMe {
                     vm.subscriptVideo(streamId: info.streamId,
@@ -118,7 +124,7 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
                                       isHighStream: false)
                 }
                 break
-            case .board:
+            default:
                 break
             }
             return
@@ -141,14 +147,18 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
             return
         }
         
+        if collectionView.indexPathsForVisibleItems.contains(indexPath) {
+            return
+        }
+        
         if view.collectionViewVideo == collectionView,
            let `cell` = cell as? VideoCell,
-           let info = cell.getInfo { /** 视频平铺 **/
+           let info = cell.info { /** 视频平铺 **/
             vm.unSubscriptVideo(streamId: info.streamId)
             return
         }
         
-        if let `cell` = cell as? VideoCellMini, let info = cell.getInfo { /** 底部列表 **/
+        if let `cell` = cell as? VideoCellMini, let info = cell.infoMini { /** 底部列表 **/
             vm.unSubscriptVideo(streamId: info.streamId)
             return
         }
@@ -158,8 +168,8 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
                         didSelectItemAt indexPath: IndexPath) {
         if collectionView == view.collectionViewVideo,
            let cell = collectionView.cellForItem(at: indexPath) as? VideoCell,
-           let renderId = cell.getInfo?.differenceIdentifier {
-            if !cell.getInfo!.showHeadImage {
+           let renderId = cell.info?.differenceIdentifier {
+            if !cell.info!.showHeadImage {
                 vm.switchToLecturer(renderId: renderId)
             }
             return
@@ -167,8 +177,8 @@ extension MainRenderUIController: UICollectionViewDelegate, UICollectionViewData
         
         if collectionView == view.videoScrollView.collectionView {
             if let cell = collectionView.cellForItem(at: indexPath) as? VideoCellMini,
-               let renderId = cell.getInfo?.differenceIdentifier,
-               !cell.getInfo!.showHeadImage { /// media or screenShare
+               let renderId = cell.infoMini?.differenceIdentifier,
+               !cell.infoMini!.showHeadImage { /// media or screenShare
                 vm.setLecturerMain(renderId: renderId)
                 return
             }

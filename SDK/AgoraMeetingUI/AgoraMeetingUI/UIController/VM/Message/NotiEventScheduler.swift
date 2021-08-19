@@ -17,7 +17,7 @@ protocol NotiEventSchedulerDelegate: NSObject {
     func notiEventSchedulerDidGetRecordFiles(recordFiles: [RecordFile])
 }
 
-class NotiEventScheduler: NSObject, MeetingTimeSourceDelegate {
+class NotiEventScheduler: NSObject {
     private let obs = NSMapTable<AnyObject, AnyObject>.weakToWeakObjects()
     private var infos = [Info]()
     private var successQueue = [MessageId]()
@@ -78,7 +78,7 @@ class NotiEventScheduler: NSObject, MeetingTimeSourceDelegate {
     }
     
     func addNotis(notis: [NotifyMessage]) {
-        let temp = notis.map({ Info(noti: $0) })
+        let temp = configShowTime(messages: notis)
         infos.append(contentsOf: temp)
     }
     
@@ -112,10 +112,6 @@ class NotiEventScheduler: NSObject, MeetingTimeSourceDelegate {
                                               fail: fail)
     }
     
-    func meetingTimeSourceTimeDidCome() {
-        updateExtern()
-    }
-    
     private func updateExtern() {
         let needCalculatedTime = infos.contains(where: { $0.type.isCalculatedTimeType && $0.count > 0 })
         if !needCalculatedTime { includeCalculatedTimeType = false  }
@@ -136,6 +132,19 @@ class NotiEventScheduler: NSObject, MeetingTimeSourceDelegate {
             infos[i].updateForSuccess()
         }
         successQueue.removeAll()
+    }
+    
+    private func configShowTime(messages: [NotifyMessage]) -> [Info] {
+        var lastTime = infos.last?.timestamp ?? 0
+        var temp = [Info]()
+        for msg in messages {
+            let showTime = msg.timestamp - lastTime > 60
+            let info = Info(noti: msg,
+                            showTime: showTime)
+            temp.append(info)
+            lastTime = msg.timestamp
+        }
+        return temp
     }
     
     private func showSystemSetting() {
@@ -194,4 +203,8 @@ extension NotifyMessageType {
     }
 }
 
-
+extension NotiEventScheduler: MeetingTimeSourceDelegate {
+    func meetingTimeSourceTimeDidCome() {
+        updateExtern()
+    }
+}

@@ -126,7 +126,7 @@ extension MeetingError {
         case -1009:
             return MeetingUILocalizedString("meetingServer_t21")
         default:
-            return "\(code)" + message
+            return message
         }
     }
 }

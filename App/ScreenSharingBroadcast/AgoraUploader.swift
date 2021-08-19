@@ -65,8 +65,7 @@ class AgoraUploader {
     }
 
     static func sendVideoBuffer(_ sampleBuffer: CMSampleBuffer) {
-        guard let videoFrame = CMSampleBufferGetImageBuffer(sampleBuffer)
-             else {
+        guard let videoFrame = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
 

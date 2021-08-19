@@ -1,41 +1,40 @@
 //
-//  VideoCellMini.swift
-//  VideoConference
+//  VideoCellMini2.swift
+//  AgoraMeetingUI
 //
-//  Created by ZYP on 2021/3/2.
-//  Copyright © 2021 agora. All rights reserved.
+//  Created by ZYP on 2021/8/12.
 //
 
 import UIKit
 
-class VideoCellMini: UICollectionViewCell {
-    @IBOutlet weak var headImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var audioImageView: UIImageView!
-    @IBOutlet weak var videoMaskImageView: UIImageView!
-    @IBOutlet weak var videoView: UIView!
-    @IBOutlet weak var hostImageView: UIImageView!
-    @IBOutlet weak var videoMaskImageViewMini: UIImageView!
-    @IBOutlet weak var audioButtonLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var headImageViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var headImageViewHeightConstraint: NSLayoutConstraint!
-    let displayLabel = UILabel()
-    private var info: Info?
-    
-    var sheetViewHeightConstraint: NSLayoutConstraint?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-        commonInit()
-    }
-    
+final class VideoCellMiniLocal: VideoCellMini {
     override func prepareForReuse() {
         super.prepareForReuse()
+        meunButton.isSelected = false
+        sheetView.isHidden = true
     }
+}
+
+final class VideoCellMiniRemote: VideoCellMini {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        meunButton.isSelected = false
+        sheetView.isHidden = true
+        if let inerView = videoView.subviews.first {
+            inerView.removeFromSuperview()
+        }
+    }
+}
+
+class VideoCellMini: VideoCell {
+    private let displayLabel = UILabel()
+    final var infoMini: Info?
+    override var headImageViewSize: CGSize { CGSize(width: 36, height: 36) }
     
-    func setup() {
-        
+    override func setup() {
+        super.setup()
+        upButton.isHidden = true
+        meunButton.isHidden = true
         displayLabel.text = MeetingUILocalizedString("ui_t2", comment: "")
         displayLabel.font = UIFont.systemFont(ofSize: 9)
         displayLabel.textColor = .white
@@ -44,23 +43,13 @@ class VideoCellMini: UICollectionViewCell {
         displayLabel.translatesAutoresizingMaskIntoConstraints = false
         displayLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         displayLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-    }
-    
-    func commonInit() {
         
+        bottomView.backgroundColor = UIColor(white: 0, alpha: 0.55)
     }
     
     func config(info: Info) {
-        self.info = info
-        hostImageView.isHidden = info.type == .video ? !info.isHost : true
-        audioImageView.isHidden = info.type != .video
-        nameLabel.isHidden = info.type != .video
-        let imageName = info.enableAudio ? "state-unmute" : "state-mute"
-        audioImageView.image = UIImage.meetingUIImageName(imageName)
-        audioButtonLeadingConstraint.constant = info.isHost ? 21 : 5
-        nameLabel.text = info.name
+        self.infoMini = info
         headImageView.image = UIImage.meetingUIImageName(info.headImageName)
-        
         switch info.type {
         case .video:
             videoView.isHidden = info.showHeadImage
@@ -84,20 +73,13 @@ class VideoCellMini: UICollectionViewCell {
             break
         }
         
-        headImageViewWidthConstraint.constant =  72/2
-        headImageViewHeightConstraint.constant =  72/2
-        videoMaskImageView.isHidden = true
-        videoMaskImageViewMini.isHidden = false
-        
+        let bottomInfo = BottomView.Info(showHost: info.isHost,
+                                         audioOpen: info.enableAudio,
+                                         name: info.name)
+        bottomView.setInfo(info: bottomInfo)
         contentView.layoutIfNeeded()
-        headImageView.layer.cornerRadius = headImageViewWidthConstraint.constant/2
-        headImageView.layer.masksToBounds = true
     }
     
-    var getInfo: Info? {
-        return info
-    }
-
 }
 
 extension VideoCellMini {
@@ -108,12 +90,13 @@ extension VideoCellMini {
         let name: String
         let headImageName: String
         let showHeadImage: Bool
+        let hasVideo: Bool
         let hasDisplayInMainScreen: Bool
         let type: InfoType
         let isMe: Bool
         let streamId: String
         let userId: String
-        let board: boardInfo?
+        let board: BoardInfo?
         
         enum InfoType: Int {
             case video = 0
@@ -133,15 +116,16 @@ extension VideoCellMini {
                 lhs.isMe == rhs.isMe &&
                 lhs.streamId == rhs.streamId &&
                 lhs.userId == rhs.userId &&
-                lhs.board == rhs.board
+                lhs.board == rhs.board &&
+                lhs.hasVideo == rhs.hasVideo 
         }
         
-        struct boardInfo: Equatable {
+        struct BoardInfo: Equatable {
             let id: String
             let token: String
             
-            static var empty: boardInfo {
-                return boardInfo(id: "", token: "")
+            static var empty: BoardInfo {
+                return BoardInfo(id: "", token: "")
             }
             
             static func == (lhs: Self, rhs: Self) -> Bool {
@@ -151,4 +135,3 @@ extension VideoCellMini {
         }
     }
 }
-

@@ -72,9 +72,9 @@ class MainRenderVM: BaseVM {
                         isHighStream: Bool) {
         Log.info(text: "subscriptVideo \(streamId)", tag: "sub")
         let _ = mediaContext.subscriptVideo(streamId: streamId,
-                                        view: view,
-                                        renderMode: .fit,
-                                        isHighStream: isHighStream)
+                                            view: view,
+                                            renderMode: .fit,
+                                            isHighStream: isHighStream)
     }
     
     func unSubscriptVideo(streamId: String) {
@@ -85,7 +85,7 @@ class MainRenderVM: BaseVM {
     func renderBoardView(view: UIView,
                          canWrite: Bool) {
         let error = boardContext.renderBoardView(view: view,
-                                         canWrite: canWrite)
+                                                 canWrite: canWrite)
         if let e = error {
             Log.info(text: "\(e.message)",
                      tag: "renderBoardView")

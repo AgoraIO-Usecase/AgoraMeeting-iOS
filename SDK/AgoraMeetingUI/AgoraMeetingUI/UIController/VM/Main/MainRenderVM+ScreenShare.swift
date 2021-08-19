@@ -100,5 +100,4 @@ extension MainRenderVM {
     func stopScreenShareByExtension() {
         closeScreenSharing()
     }
-    
 }

@@ -13,7 +13,5 @@ extension ChatMessageVM: MessagesEventHandler {
         handleUpdateChatInfosOnQueue(chatMessages: msgs)
     }
     
-    func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {
-        
-    }
+    func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {}
 }

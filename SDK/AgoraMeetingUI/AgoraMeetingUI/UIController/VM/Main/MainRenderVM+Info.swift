@@ -118,7 +118,8 @@ extension VideoCellMini.Info: Differentiable {
             type == rhs.type &&
             isMe == rhs.isMe &&
             streamId == rhs.streamId &&
-            board == rhs.board
+            board == rhs.board &&
+            hasVideo == rhs.hasVideo
     }
 }
 
@@ -136,7 +137,8 @@ extension VideoCell.Info: Differentiable {
             headImageName == source.headImageName &&
             showHeadImage == source.showHeadImage &&
             streamId == source.streamId &&
-            sheetInfos == source.sheetInfos
+            sheetInfos == source.sheetInfos &&
+            hasVideo == source.hasVideo
     }
 }
 

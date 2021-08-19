@@ -79,9 +79,6 @@ class LoginVM: NSObject {
     }
     
     func entryRoom(info: Info) {
-        let string = "{\"host\":\"\(host)\"}"
-        sdk.setParameters(parameters: string)
-        
         let launchConfig = createLaunchConfig(info: info)
         sdk.exitRoomDelegate = self
         stopNetworkTest()

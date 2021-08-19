@@ -7,12 +7,12 @@
 		<key>ScreenSharingBroadcast.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>0</integer>
 		</dict>
 		<key>VideoConference.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>

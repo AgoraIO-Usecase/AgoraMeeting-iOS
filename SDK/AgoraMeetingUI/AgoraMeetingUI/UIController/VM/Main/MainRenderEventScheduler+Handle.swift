@@ -47,7 +47,8 @@ extension MainRenderEventScheduler {
                 let userOperation = sortCached[id]?.userOperation
                 let isUp = (userOperation == nil) ? false : userOperation! == .up
                 let showMeunButton = render.options.count > 0
-                let showHeadImage = !render.hasVideo
+                let showHeadImage = render.hasVideo ? (render.isMe ? false : render.videoState != .running) : true
+                let hasVideo = render.hasVideo
                 let streamId = render.streamId
                 let sheetInfos = render.options.toSheetInfos
                 let isMe = render.isMe
@@ -59,6 +60,7 @@ extension MainRenderEventScheduler {
                                          showMeunButton: showMeunButton,
                                          headImageName: headImageName,
                                          showHeadImage: showHeadImage,
+                                         hasVideo: hasVideo,
                                          isMe: isMe,
                                          streamId: streamId,
                                          sheetInfos: sheetInfos,
@@ -85,18 +87,20 @@ extension MainRenderEventScheduler {
                 let headImageName = String.headImageName(userName: name.md5())
                 let userId = render.userInfo.userId
                 let enableAudio = render.hasAudio
-                let showHeadImage = !render.hasVideo
+                let showHeadImage = render.hasVideo ? (render.isMe ? false : render.videoState != .running) : true
+                let canRende = render.hasVideo
                 let hasDisplayInMainScreen = selectedId == id
                 let type = render.type.cellMiniInfoType
                 let isMe = render.isMe
                 let streamId = render.streamId
-                let board = VideoCellMiniInfo.boardInfo(id: "", token: "")
+                let board = VideoCellMiniInfo.BoardInfo.empty
                 return VideoCellMiniInfo(id: id,
                                          isHost: isHost,
                                          enableAudio: enableAudio,
                                          name: name,
                                          headImageName: headImageName,
                                          showHeadImage: showHeadImage,
+                                         hasVideo: canRende,
                                          hasDisplayInMainScreen: hasDisplayInMainScreen,
                                          type: type,
                                          isMe: isMe,

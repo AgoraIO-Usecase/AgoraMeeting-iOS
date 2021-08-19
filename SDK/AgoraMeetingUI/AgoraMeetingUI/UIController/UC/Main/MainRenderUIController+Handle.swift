@@ -24,6 +24,7 @@ extension MainRenderUIController {
                          showRightButton: showRightButton)
             if hasChangeMode {
                 data = info
+                view.videoScrollView.collectionView.reloadData()
                 collectionView.reloadData()
                 return
             }
@@ -60,6 +61,7 @@ extension MainRenderUIController {
                          showRightButton: showRightButton)
             if hasChangeMode {
                 data = info
+                view.collectionViewVideo.reloadData()
                 collectionView.reloadData()
             }
             else {

@@ -33,7 +33,7 @@ class MainRenderEventScheduler: NSObject {
     
     init(queue: DispatchQueue = .init(label: "MainRenderEventScheduler.queue")) {
         self.queue = queue
-        self.timer = MeetingTimeSource(interval: .seconds(1),
+        self.timer = MeetingTimeSource(interval: .milliseconds(300),
                                        repeats: true,
                                        queue: queue)
         super.init()
