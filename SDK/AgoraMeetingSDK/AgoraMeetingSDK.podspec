@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://agora.io'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Agora Lab' => 'devlope@agora.io' }
-  s.source           = { :git => 'https://github.com/AgoraIO-Usecase/AgoraMeeting-iOS.git', :tag => 'v_sdk_1.0.1' }
+  s.source           = { :git => 'https://github.com/AgoraIO-Usecase/AgoraMeeting-iOS.git', :tag => 'v_sdk_1.0.1.1' }
   s.ios.deployment_target = '11.0'
   s.source_files = 'SDK/AgoraMeetingSDK/AgoraMeetingSDK/MeetingSDK.swift'
   s.swift_versions = "5.0"
