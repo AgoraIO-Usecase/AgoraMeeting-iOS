@@ -53,7 +53,7 @@ class BoardVM: BaseVM {
         
     }
     
-    func setAppliance(appliance: String) {
+    func setAppliance(appliance: Action) {
         let error = boardContext.setAppliance(appliance: appliance)
         if let e = error {
             Log.info(text: "\(e.message)",
@@ -88,7 +88,7 @@ class BoardVM: BaseVM {
     }
     
     func setApplianceAction(action: Action) {
-        setAppliance(appliance: action.rawValue)
+        setAppliance(appliance: action)
     }
     
     func setWritable(writable: Bool) {
@@ -149,12 +149,5 @@ extension BoardVM {
 }
 
 extension BoardVM { /** info **/
-    enum Action: String {
-        case select = "selector"
-        case pan = "pencil"
-        case text = "text"
-        case eraser = "eraser"
-        case rectangle = "rectangle"
-        case ellipse = "ellipse"
-    }
+    typealias Action = BoardAppliance
 }

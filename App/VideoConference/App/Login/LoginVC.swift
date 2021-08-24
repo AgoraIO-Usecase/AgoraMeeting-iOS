@@ -77,6 +77,12 @@ class LoginVC: BaseViewController {
         
         vm.checkUpdate()
         
+        #if DEBUG
+        roomNameTextField.text = StorageManager.roomName
+        #elseif TestFlightDevEnv
+        roomNameTextField.text = StorageManager.roomName
+        #endif
+        
         roomNameTextField.delegate = self
         roomPsdTextField.delegate = self
         userNameTextField.delegate = self
@@ -141,7 +147,8 @@ class LoginVC: BaseViewController {
                                 enableVideo: enableVideo,
                                 enableAudio: enableAudio,
                                 userId: vm.currentUserId,
-                                roomId: roomName.md5())
+                                roomId: roomName.md5(),
+                                localUserProperties: ["my": "aaa"])
         vm.entryRoom(info: info)
     }
     

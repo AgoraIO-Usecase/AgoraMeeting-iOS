@@ -109,7 +109,8 @@ class LoginVM: NSObject {
                             openCamera: info.enableVideo,
                             openMic: info.enableAudio,
                             token: rtmToken,
-                            userInoutLimitNumber: userInoutLimitNumber)
+                            userInoutLimitNumber: userInoutLimitNumber,
+                            localUserProperties: info.localUserProperties)
     }
     
     func signalImageName(type: NetworkQuality) -> String {
@@ -184,6 +185,7 @@ extension LoginVM {
         let enableAudio: Bool
         let userId: String
         let roomId: String
+        let localUserProperties: UserProperties
     }
 }
 
@@ -195,7 +197,7 @@ extension LoginVM: NetworkQualityDelegate {
 }
 
 extension LoginVM: ExitRoomDelegate {
-    func onExit() {
+    func onExit(cache: RoomCache) {
         startNetworkTest()
         invokeShouldShowScoreVC()
     }

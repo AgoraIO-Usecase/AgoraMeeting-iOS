@@ -11,6 +11,7 @@ import AgoraMeetingContext
 extension MainRenderVM: RenderEventHandler {
     func onRenderInfoUpdated(renders: [RenderInfo]) {
         eventScheduler.set(renders: renders)
+        handleAudioSubscribe(infos: renders)
     }
 }
 

@@ -32,14 +32,14 @@ public class MeetingSDK: NSObject {
                        fail: @escaping FailBlock) {
         core.exitRoomDelegate = self
         core.launch(lauchConfig: launchConfig,
-                     success: { (contextPool) in
+                    success: { (contextPool) in
                         let ui = AgoraMeetingUI(contextPool: contextPool)
                         ui.modalPresentationStyle = .fullScreen
                         success(ui)
-                     },
-                     fail: { (e) in
+                    },
+                    fail: { (e) in
                         fail(e)
-                     })
+                    })
     }
     
     public static func getCoreVersionName() -> String {
@@ -76,8 +76,8 @@ public class MeetingSDK: NSObject {
 }
 
 extension MeetingSDK: ExitRoomDelegate {
-    public func onExit() {
-        exitRoomDelegate?.onExit()
+    public func onExit(cache: RoomCache) {
+        exitRoomDelegate?.onExit(cache: cache)
     }
 }
 

@@ -26,9 +26,7 @@ class VideoCellRemote: VideoCell {
         super.prepareForReuse()
         meunButton.isSelected = false
         sheetView.isHidden = true
-        if let inerView = videoView.subviews.first {
-            inerView.removeFromSuperview()
-        }
+        videoView.backgroundColor = .clear
     }
 }
 

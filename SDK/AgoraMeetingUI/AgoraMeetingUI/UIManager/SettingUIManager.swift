@@ -12,9 +12,11 @@ typealias SettingVC = SettingUIManager
 class SettingUIManager: UIViewController {
     weak var routerDelegate: UIManagerRouterProtocol?
     var settingUC: SettingUIController!
+    weak var contextPool: AgoraMeetingContextPool?
     
     init(contextPool: AgoraMeetingContextPool) {
         super.init(nibName: nil, bundle: nil)
+        self.contextPool = contextPool
         settingUC = SettingUIController(contextPool: contextPool)
     }
     
@@ -44,6 +46,7 @@ class SettingUIManager: UIViewController {
     func setup() {
         title = MeetingUILocalizedString("set_t17", comment: "")
         view.backgroundColor = .white
+//        addDebugButton()
     }
     
     func commonInit() {
@@ -66,6 +69,21 @@ class SettingUIManager: UIViewController {
         settingView.bottomAnchor
             .constraint(equalTo: view.bottomAnchor)
             .isActive = true
+    }
+    
+    func addDebugButton() {
+        #if DEBUG
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
+                                                            target: self,
+                                                            action: #selector(debugAction))
+        #endif
+    }
+    
+    @objc func debugAction() {
+        let vc = DebugUIManager()
+        vc.contextPool = contextPool
+        navigationController?.pushViewController(vc,
+                                                 animated: true)
     }
 }
 

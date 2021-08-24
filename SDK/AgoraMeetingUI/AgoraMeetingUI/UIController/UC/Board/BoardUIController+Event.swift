@@ -35,10 +35,10 @@ extension BoardUIController: EEWhiteboardToolDelegate, EEColorShowViewDelegate {
             view.colorView.isHidden = !view.colorView.isHidden
             break
         case .select:
-            vm.setApplianceAction(action: .select)
+            vm.setApplianceAction(action: .selector)
             break
         case .pan:
-            vm.setApplianceAction(action: .pan)
+            vm.setApplianceAction(action: .pencil)
             break
         case .text:
             vm.setApplianceAction(action: .text)

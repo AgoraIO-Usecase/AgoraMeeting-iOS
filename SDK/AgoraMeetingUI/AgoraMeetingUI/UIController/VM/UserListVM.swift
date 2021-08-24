@@ -141,8 +141,15 @@ extension UserListVM { /** public **/
 
 extension UserListVM: UsersEvnetHandler {
     func onKickedOut() {}
+    func onLocalConnectStateChanged(state: ConnectState) {}
+    
     func onUserListUpdated(userList: [UserDetailInfo]) {
         saveUsers(userList: userList)
+    }
+    
+    func onUserPropertiesUpdated(userId: String,
+                                 full: UserProperties) {
+        
     }
 }
 

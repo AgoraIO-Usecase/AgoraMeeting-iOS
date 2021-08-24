@@ -125,7 +125,8 @@ extension MainTopVM: RoomEventHandler {
         invokeMainTopVMDidJoinRoom(state: state)
         checkUserInteraction()
         if state == .joinSuccess {
-            Log.info(text: "onRoomJoined", tag: "MainTopVM")
+            Log.info(text: "onRoomJoined",
+                     tag: "MainTopVM")
             invokeMainTopVMShouldStartTime()
         }
     }
@@ -170,8 +171,19 @@ extension MainTopVM: MediaEventHandler {
 extension MainTopVM: UsersEvnetHandler {
     func onUserListUpdated(userList: [UserDetailInfo]) {}
     
+    func onLocalConnectStateChanged(state: ConnectState) {
+        Log.info(text: "\(state)",
+                 tag: "onLocalConnectStateChanged")
+    }
+    
     func onKickedOut() {
         invokeMainTopVMDidExitRoom(type: .beKickout)
+    }
+    
+    func onUserPropertiesUpdated(userId: String,
+                                 full: UserProperties) {
+        Log.info(text: "\(full)",
+                 tag: "onUserPropertiesUpdated")
     }
 }
 

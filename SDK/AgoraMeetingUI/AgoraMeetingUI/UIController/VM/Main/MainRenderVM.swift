@@ -27,6 +27,7 @@ class MainRenderVM: BaseVM {
     var layout = RenderLayout.tile
     var selectedId = ""
     let eventScheduler = MainRenderEventScheduler()
+    var subscribedAudios = [String]()
     
     init(renderContext: RenderContext,
          usersContext: UsersContext,
@@ -109,5 +110,26 @@ class MainRenderVM: BaseVM {
     
     func switchToTile() {
         eventScheduler.setLayoutManual(layout: .tile)
+    }
+    
+    func handleAudioSubscribe(infos: [RenderInfo]) {
+        let activeStreamIds = infos.filter({ $0.type == .media && !$0.isMe && $0.hasAudio }).map({ $0.streamId })
+        
+        /// unSubscribe
+        for id in subscribedAudios {
+            if activeStreamIds.contains(id) { continue }
+            if let error = mediaContext.unSubscriptVideo(streamId: id) {
+                Log.error(error: error,
+                          tag: "handleAudioSubscribe")
+            }
+        }
+        
+        /// subscribe
+        if let error = mediaContext.subscriptAudio(streamIds: activeStreamIds) {
+            Log.error(error: error,
+                      tag: "handleAudioSubscribe")
+            return
+        }
+        subscribedAudios = activeStreamIds
     }
 }
