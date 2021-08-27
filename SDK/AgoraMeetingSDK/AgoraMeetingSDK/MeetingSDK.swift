@@ -14,8 +14,8 @@ public class MeetingSDK: NSObject {
     public typealias SuccessBlock = (AgoraMeetingUI) -> ()
     public typealias FailBlock = (MeetingError) -> ()
     private var core: MeetingCore!
-    public weak var exitRoomDelegate: ExitRoomDelegate?
-    public weak var networkQualityDelegate: NetworkQualityDelegate?
+    @objc public weak var exitRoomDelegate: ExitRoomDelegate?
+    @objc public weak var networkQualityDelegate: NetworkQualityDelegate?
     
     @objc public init(config: MeetingConfig) {
         core = MeetingCore(config: config)
@@ -27,9 +27,9 @@ public class MeetingSDK: NSObject {
         core.networkQualityDelegate = self
     }
     
-    public func launch(launchConfig: LaunchConfig,
-                       success: @escaping SuccessBlock,
-                       fail: @escaping FailBlock) {
+    @objc public func launch(launchConfig: LaunchConfig,
+                             success: @escaping SuccessBlock,
+                             fail: @escaping FailBlock) {
         core.exitRoomDelegate = self
         core.launch(lauchConfig: launchConfig,
                     success: { (contextPool) in
@@ -42,31 +42,31 @@ public class MeetingSDK: NSObject {
                     })
     }
     
-    public static func getCoreVersionName() -> String {
+    @objc public static func getCoreVersionName() -> String {
         MeetingCore.getCoreVersionName()
     }
     
-    public static func getCoreVersionCode() -> Int {
+    @objc public static func getCoreVersionCode() -> Int {
         MeetingCore.getCoreVersionCode()
     }
     
-    public static func getRtcVersionName() -> String {
+    @objc public static func getRtcVersionName() -> String {
         MeetingCore.getRtcVersionName()
     }
     
-    public static func getRtmVersionName() -> String {
+    @objc public static func getRtmVersionName() -> String {
         MeetingCore.getRtmVersionName()
     }
     
-    public static func getWhiteBoardVersionName() -> String {
+    @objc public static func getWhiteBoardVersionName() -> String {
         MeetingCore.getWhiteBoardVersionName()
     }
     
-    public func enableNetQualityCheck() {
+    @objc public func enableNetQualityCheck() {
         core.enableNetQualityCheck()
     }
     
-    public func disableNetQualityCheck() {
+    @objc public func disableNetQualityCheck() {
         core.disableNetQualityCheck()
     }
     
