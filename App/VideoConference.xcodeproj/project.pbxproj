@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2611336626D93E65009AA3FD /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611336526D93E65009AA3FD /* TestVC.m */; };
 		263A9C7C25EFAB2900C9DB7F /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A9C7B25EFAB2900C9DB7F /* ReplayKit.framework */; };
 		263A9C8325EFAB2900C9DB7F /* ScreenSharingBroadcast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		265BA51C25F0FD6500FAB352 /* AgoraUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BA51A25F0FD6400FAB352 /* AgoraUploader.swift */; };
@@ -79,6 +80,8 @@
 
 /* Begin PBXFileReference section */
 		0BC5E4E14A0F3AD5CA151FEA /* Pods_VideoConference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoConference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2611336426D93E65009AA3FD /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		2611336526D93E65009AA3FD /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		263A9C7A25EFAB2900C9DB7F /* ScreenSharingBroadcast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenSharingBroadcast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		263A9C7B25EFAB2900C9DB7F /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		263A9C9225F084EC00C9DB7F /* ScreenSharingBroadcastDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ScreenSharingBroadcastDebug.entitlements; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				268EE680265E4C7200D595B7 /* LoginVM.swift */,
 				26E400D126958F0700255041 /* BrowseVC.swift */,
 				268EE689265E4F5D00D595B7 /* BaseViewController.swift */,
+				2611336426D93E65009AA3FD /* TestVC.h */,
+				2611336526D93E65009AA3FD /* TestVC.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -493,7 +498,6 @@
 				263A9C8925EFAB2900C9DB7F /* Embed App Extensions */,
 				26D7145E2637B98400786A58 /* ShellScript */,
 				CC495E8F94C89C6D354FCFF0 /* [CP] Embed Pods Frameworks */,
-				64C5379AFEA4A08DCA0FB663 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -615,23 +619,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n#if [ $CONFIGURATION == Release ]; then\n    buildTime=`date +\\%Y.\\%m.\\%d`\n    /usr/libexec/PlistBuddy -c \"Set :AppBuildTime $buildTime\" \"$INFOPLIST_FILE\"\n#fi\n";
 		};
-		64C5379AFEA4A08DCA0FB663 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConference/Pods-VideoConference-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CC495E8F94C89C6D354FCFF0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -699,6 +686,7 @@
 				26D124D6267059A7009ABE14 /* TextFieldCustomClear.swift in Sources */,
 				266DCB4E2692F47500B2AA38 /* TokenBuilder.m in Sources */,
 				268EE6A1265E529100D595B7 /* StorageManager.swift in Sources */,
+				2611336626D93E65009AA3FD /* TestVC.m in Sources */,
 				268EE6A5265E582D00D595B7 /* Extensions.swift in Sources */,
 				266DCB502692F47500B2AA38 /* md5.cpp in Sources */,
 				268EE681265E4C7200D595B7 /* LoginTipsView.swift in Sources */,
