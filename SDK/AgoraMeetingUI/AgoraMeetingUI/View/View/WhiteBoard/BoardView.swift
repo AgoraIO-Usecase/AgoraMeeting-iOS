@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import WhiteModule
 
 class BoardView: UIView {
     let whiteBoardView = UIView()

@@ -79,6 +79,17 @@ class LoginVM: NSObject {
     }
     
     func entryRoom(info: Info) {
+        
+        do {
+            try isValidUserName(text: info.userName)
+            try isValidRoomName(text: info.roomName)
+        } catch let error  {
+            if let e = error as? MeetingError {
+                delegate?.loginVMDidFailEntryRoomWithTips(tips: e.localizedMessage)
+            }
+            return
+        }
+        
         let launchConfig = createLaunchConfig(info: info)
         sdk.exitRoomDelegate = self
         stopNetworkTest()
@@ -173,6 +184,35 @@ class LoginVM: NSObject {
             return platform
         }
         return plat
+    }
+    
+    func isValidUserName(text: String) throws {
+        guard text.count > 0 else {
+            throw MeetingError.local(key: .userNameEmpty)
+        }
+        
+        guard text.count >= 3, text.count <= 50 else {
+            throw MeetingError.local(key: .userNameLengthIllegal)
+        }
+        
+        guard !text.containsEmoji else {
+            throw MeetingError.local(key: .userNameContainEmoji)
+        }
+        
+    }
+    
+    func isValidRoomName(text: String) throws {
+        guard text.count > 0 else {
+            throw MeetingError.local(key: .roomNameEmpty)
+        }
+        
+        guard text.count >= 3, text.count <= 50 else {
+            throw MeetingError.local(key: .roomNameLengthIllegal)
+        }
+        
+        guard !text.containsEmoji else {
+            throw MeetingError.local(key: .roomNameContainEmoji)
+        }
     }
 }
 

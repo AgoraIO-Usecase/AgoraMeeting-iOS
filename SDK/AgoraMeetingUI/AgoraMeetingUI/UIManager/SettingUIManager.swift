@@ -46,7 +46,9 @@ class SettingUIManager: UIViewController {
     func setup() {
         title = MeetingUILocalizedString("set_t17", comment: "")
         view.backgroundColor = .white
+        #if DEBUG
 //        addDebugButton()
+        #endif
     }
     
     func commonInit() {

@@ -9,8 +9,6 @@
 #import "SpeakerView.h"
 #import "SpeakerLeftItem.h"
 #import "SpeakerModel.h"
-#import <Whiteboard/Whiteboard.h>
-#import <WhiteModule/WhiteManager.h>
 #import "UIColor+AppColor.h"
 #import "ScaleVideoView.h"
 #import "NSString+Size.h"

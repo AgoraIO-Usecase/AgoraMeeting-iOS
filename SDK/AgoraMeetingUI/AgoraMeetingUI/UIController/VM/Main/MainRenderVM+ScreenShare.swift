@@ -43,6 +43,7 @@ extension MainRenderVM {
     func openScreenSharing() {
         screenContext.openScreenSharing(success: {}) { [weak self](error) in
             self?.invokeShouldShowTip(text: error.localizedMessage)
+            self?.handleScreen()
         }
     }
     
@@ -59,9 +60,6 @@ extension MainRenderVM {
                 invokeRenderVMShouldShowSystemViewForScreenStart()
                 return
             }
-            
-            Log.info(text: "no screenInfo, should close screen", tag: "MainRenderVM")
-            closeScreenSharing()
         }
 
         if !screenContext.isScreenSharing(){ /** stop **/

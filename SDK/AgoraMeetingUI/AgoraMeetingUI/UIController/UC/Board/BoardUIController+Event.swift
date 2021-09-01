@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import WhiteModule
 import Whiteboard
 import AgoraMeetingContext
 

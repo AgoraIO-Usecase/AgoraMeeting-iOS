@@ -20,9 +20,7 @@ final class VideoCellMiniRemote: VideoCellMini {
         super.prepareForReuse()
         meunButton.isSelected = false
         sheetView.isHidden = true
-        if let inerView = videoView.subviews.first {
-            inerView.removeFromSuperview()
-        }
+        setupVideoView()
     }
 }
 

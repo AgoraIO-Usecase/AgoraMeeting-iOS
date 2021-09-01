@@ -26,12 +26,12 @@ class VideoCellRemote: VideoCell {
         super.prepareForReuse()
         meunButton.isSelected = false
         sheetView.isHidden = true
-        videoView.backgroundColor = .clear
+        setupVideoView()
     }
 }
 
 class VideoCell: UICollectionViewCell {
-    let videoView = UIView()
+    var videoView = UIView()
     let videoMaskImageView = UIImageView()
     let headImageView = UIImageView()
     let upButton = UIButton()
@@ -50,6 +50,7 @@ class VideoCell: UICollectionViewCell {
         super.init(frame: frame)
         setup()
         commonInit()
+        setupVideoView()
     }
     
     required init?(coder: NSCoder) {
@@ -58,7 +59,6 @@ class VideoCell: UICollectionViewCell {
     
     func setup() {
         contentView.backgroundColor =  UIColor(hex: 0x434343)
-        videoView.backgroundColor = .clear
         videoMaskImageView.image = UIImage.meetingUIImageName("video-mask")
         upButton.setImage(UIImage.meetingUIImageName("置顶默认状态"),
                           for: .normal)
@@ -70,7 +70,6 @@ class VideoCell: UICollectionViewCell {
         headImageView.layer.masksToBounds = true
         sheetView.isHidden = true
         
-        contentView.addSubview(videoView)
         contentView.addSubview(videoMaskImageView)
         contentView.addSubview(headImageView)
         contentView.addSubview(upButton)
@@ -78,26 +77,12 @@ class VideoCell: UICollectionViewCell {
         contentView.addSubview(bottomView)
         contentView.addSubview(sheetView)
         
-        videoView.translatesAutoresizingMaskIntoConstraints = false
         videoMaskImageView.translatesAutoresizingMaskIntoConstraints = false
         headImageView.translatesAutoresizingMaskIntoConstraints = false
         upButton.translatesAutoresizingMaskIntoConstraints = false
         meunButton.translatesAutoresizingMaskIntoConstraints = false
         bottomView.translatesAutoresizingMaskIntoConstraints = false
         sheetView.translatesAutoresizingMaskIntoConstraints = false
-        
-        videoView.leftAnchor
-            .constraint(equalTo: contentView.leftAnchor)
-            .isActive = true
-        videoView.rightAnchor
-            .constraint(equalTo: contentView.rightAnchor)
-            .isActive = true
-        videoView.topAnchor
-            .constraint(equalTo: contentView.topAnchor)
-            .isActive = true
-        videoView.bottomAnchor
-            .constraint(equalTo: contentView.bottomAnchor)
-            .isActive = true
         
         videoMaskImageView.leftAnchor
             .constraint(equalTo: contentView.leftAnchor)
@@ -207,6 +192,27 @@ class VideoCell: UICollectionViewCell {
             sheetView.isHidden = !meunButton.isSelected
             
         }
+    }
+    
+    func setupVideoView() {
+        videoView.removeFromSuperview()
+        videoView = UIView()
+        videoView.backgroundColor = .clear
+        contentView.insertSubview(videoView,
+                                  belowSubview: videoMaskImageView)
+        videoView.translatesAutoresizingMaskIntoConstraints = false
+        videoView.leftAnchor
+            .constraint(equalTo: contentView.leftAnchor)
+            .isActive = true
+        videoView.rightAnchor
+            .constraint(equalTo: contentView.rightAnchor)
+            .isActive = true
+        videoView.topAnchor
+            .constraint(equalTo: contentView.topAnchor)
+            .isActive = true
+        videoView.bottomAnchor
+            .constraint(equalTo: contentView.bottomAnchor)
+            .isActive = true
     }
 }
 

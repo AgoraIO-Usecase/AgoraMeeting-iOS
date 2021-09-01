@@ -117,7 +117,7 @@ extension MeetingError {
                 return MeetingUILocalizedString("meetingServer_t24")
             
             default:
-                return "\(code)" + message
+                return "\(code) " + message
         }
     }
     

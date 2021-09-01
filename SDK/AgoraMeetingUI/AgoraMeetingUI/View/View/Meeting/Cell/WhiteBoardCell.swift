@@ -8,7 +8,6 @@
 
 import UIKit
 import Whiteboard
-import WhiteModule
 
 class WhiteBoardCell: UICollectionViewCell {
     var boardView = UIView()
