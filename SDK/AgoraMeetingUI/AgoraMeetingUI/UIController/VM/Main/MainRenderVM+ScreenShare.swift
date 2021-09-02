@@ -41,9 +41,10 @@ extension MainRenderVM {
     }
     
     func openScreenSharing() {
-        screenContext.openScreenSharing(success: {}) { [weak self](error) in
-            self?.invokeShouldShowTip(text: error.localizedMessage)
+        screenContext.openScreenSharing(success: { [weak self] in
             self?.handleScreen()
+        }) { [weak self](error) in
+            self?.invokeShouldShowTip(text: error.localizedMessage)
         }
     }
     

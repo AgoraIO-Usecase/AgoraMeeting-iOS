@@ -76,8 +76,10 @@ public class MeetingSDK: NSObject {
 }
 
 extension MeetingSDK: ExitRoomDelegate {
-    public func onExit(cache: RoomCache) {
-        exitRoomDelegate?.onExit(cache: cache)
+    public func onExit(cache: RoomCache,
+                       existReason: ExistReason) {
+        exitRoomDelegate?.onExit(cache: cache,
+                                 existReason: existReason)
     }
 }
 

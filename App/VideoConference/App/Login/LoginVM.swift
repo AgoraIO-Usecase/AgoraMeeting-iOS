@@ -237,9 +237,13 @@ extension LoginVM: NetworkQualityDelegate {
 }
 
 extension LoginVM: ExitRoomDelegate {
-    func onExit(cache: RoomCache) {
-        startNetworkTest()
-        invokeShouldShowScoreVC()
+    extension LoginVM: ExitRoomDelegate {
+        func onExit(cache: RoomCache,
+                    existReason: ExistReason) {
+            print("existReason \(existReason)")
+            startNetworkTest()
+            invokeShouldShowScoreVC()
+        }
     }
 }
 
