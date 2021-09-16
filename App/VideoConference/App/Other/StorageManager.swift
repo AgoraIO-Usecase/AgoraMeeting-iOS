@@ -68,7 +68,7 @@ class StorageManager {
         get {
             var value = (UserDefaults.standard.value(forKey: "uuid") as? String)
             if value == nil {
-                value = UUID().uuidString
+                value = UUID().uuidString.replacingOccurrences(of: "-", with: "").lowercased()
                 UserDefaults.standard.setValue(value,
                                                forKey: "uuid")
             }

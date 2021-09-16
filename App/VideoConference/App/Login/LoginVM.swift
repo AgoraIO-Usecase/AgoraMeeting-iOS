@@ -236,7 +236,6 @@ extension LoginVM: NetworkQualityDelegate {
     }
 }
 
-extension LoginVM: ExitRoomDelegate {
     extension LoginVM: ExitRoomDelegate {
         func onExit(cache: RoomCache,
                     existReason: ExistReason) {
@@ -245,7 +244,6 @@ extension LoginVM: ExitRoomDelegate {
             invokeShouldShowScoreVC()
         }
     }
-}
 
 extension LoginVM {
     func invokeShouldUpdateNetworkIcon(imageName: String) {
@@ -271,6 +269,4 @@ extension LoginVM {
             self.delegate?.loginVMShouldShowScoreVC()
         }
     }
-    
-    
 }

@@ -11,7 +11,7 @@ import AgoraMeetingContext
 class DebugUIManager: UIViewController {
 
     let tableView = UITableView(frame: .zero, style: .grouped)
-    let items = ["更新用户属性", "删除用户属性", "读取用户属性"]
+    let items = ["更新用户属性", "读取用户属性", "更新房间属性", "读取房间属性", "发送私聊消息"]
     var contextPool: AgoraMeetingContextPool?
     
     override func viewDidLoad() {
@@ -32,9 +32,10 @@ class DebugUIManager: UIViewController {
     
     private func commonInit() {
         contextPool?.usersContext.registerEventHandler(self)
+        contextPool?.messageContext.registerEventHandler(self)
     }
     
-    func update() {
+    func updateUserProperty() {
         contextPool?.usersContext.updateLocalUserProperties(properties: ["my": "ccc"],
                                                             success: {
                                                                 Log.debug(text: "updateLocalUserProperties success",
@@ -44,23 +45,41 @@ class DebugUIManager: UIViewController {
                                                             })
     }
     
-    func delete() {
-        contextPool?.usersContext.deleteLocalUserProperties(keys: ["my"],
-                                                            success: {
-                                                                Log.debug(text: "deleteLocalUserProperties success",
-                                                                          tag: "DebugUIManager")
-                                                            },
-                                                            fail: { _ in
-                                                                
-                                                            })
-    }
-    
-    func read() {
+    func readUserProperty() {
         if let userId = contextPool?.usersContext.getLocalUserInfo().userId {
             let result = contextPool?.usersContext.getUserProperties(userId: userId)
             Log.debug(text: "read: \(result ?? [:])",
                       tag: "DebugUIManager")
         }
+    }
+    
+    func updateRoomProperty() {
+        contextPool?.roomContext.updateFlexRoomProperties(properties: ["user" : "123",
+                                                                       "other" : "88ji"],
+                                                          success: {
+                                                            Log.debug(text: "updateFlexRoomProperties success",
+                                                                      tag: "DebugUIManager")
+                                                          },
+                                                          fail: { _ in })
+    }
+    
+    func readRoomProperty() {
+        let flexRoomProperties = contextPool?.roomContext.getFlexRoomProperties()
+        Log.debug(text: "read: \(flexRoomProperties ?? [:])", tag: "DebugUIManager")
+    }
+    
+    func sendPrivateMsg() {
+        guard let targetUserId = contextPool?.usersContext.getUserInfoList().filter({ !$0.isMe }).first?.userId else {
+            return
+        }
+        
+        contextPool?.messageContext.sendPrivateChatMessage(targetUserId: targetUserId,
+                                                           content: "hello",
+                                                           success: {
+                                                            Log.info(text: "发送成功", tag: "DebugUIManager")
+                                                           }, fail: {error in
+                                                            Log.error(error: error, tag: "DebugUIManager")
+                                                           })
     }
 }
 
@@ -80,23 +99,32 @@ extension DebugUIManager: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath,
                               animated: true)
         if indexPath.row == 0 {
-            update()
+            updateUserProperty()
             return
         }
         
         if indexPath.row == 1 {
-            delete()
+            readUserProperty()
             return
         }
         
         if indexPath.row == 2 {
-            read()
+            updateRoomProperty()
             return
+        }
+        
+        if indexPath.row == 3 {
+            readRoomProperty()
+            return
+        }
+        
+        if indexPath.row == 4 {
+            sendPrivateMsg()
         }
     }
 }
 
-extension DebugUIManager: UsersEvnetHandler {
+extension DebugUIManager: UsersEventHandler {
     func onUserListUpdated(userList: [UserDetailInfo]) {
         
     }
@@ -113,5 +141,21 @@ extension DebugUIManager: UsersEvnetHandler {
                                  full: UserProperties) {
         Log.debug(text: "fill:\(full)",
                   tag: "DebugUIManager")
+    }
+}
+
+extension DebugUIManager: MessagesEventHandler {
+    func onChatMessagesUpdated(msgs: [ChatMessage]) {
+        
+    }
+    
+    func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {
+        
+    }
+    
+    func onPrivateChatMessageReceived(content: String, fromUser: UserInfo) {
+        DispatchQueue.main.async { [weak self] in
+            self?.view.show(toast: "收到消息")
+        }
     }
 }

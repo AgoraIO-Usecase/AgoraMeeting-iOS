@@ -31,7 +31,7 @@ public class MeetingSDK: NSObject {
                              success: @escaping SuccessBlock,
                              fail: @escaping FailBlock) {
         core.exitRoomDelegate = self
-        core.launch(lauchConfig: launchConfig,
+        core.launch(launchConfig: launchConfig,
                     success: { (contextPool) in
                         let ui = AgoraMeetingUI(contextPool: contextPool)
                         ui.modalPresentationStyle = .fullScreen

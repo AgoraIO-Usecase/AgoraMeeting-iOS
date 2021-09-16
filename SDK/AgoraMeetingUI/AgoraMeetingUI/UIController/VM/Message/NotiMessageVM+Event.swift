@@ -16,6 +16,9 @@ extension NotiMessageVM: MessagesEventHandler {
     func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {
         notiScheduler.setNotis(notis: msgs)
     }
+    
+    func onPrivateChatMessageReceived(content: String,
+                                      fromUser: UserInfo){}
 }
 
 extension NotiMessageVM: NotiSchedulerEventHandle {

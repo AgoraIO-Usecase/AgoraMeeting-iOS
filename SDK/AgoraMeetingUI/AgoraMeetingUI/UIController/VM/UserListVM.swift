@@ -139,7 +139,7 @@ extension UserListVM { /** public **/
     }
 }
 
-extension UserListVM: UsersEvnetHandler {
+extension UserListVM: UsersEventHandler {
     func onKickedOut() {}
     func onLocalConnectStateChanged(state: ConnectState) {}
     

@@ -253,16 +253,18 @@ extension MainBottomVM: RoomEventHandler {
     func onRoomClosed(reason: RoomClosedReason) {}
     func onUserPermissionUpdated(device: DeviceType,
                                  access: Bool) {}
+    func onFlexRoomPropertiesChanged(properties: RoomProperties) {}
 }
 
 extension MainBottomVM: MessagesEventHandler {
     func onChatMessagesUpdated(msgs: [ChatMessage]) {
         messageRedDotShouldCalculated(count: msgs.count)
     }
-    
     func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {}
+    func onPrivateChatMessageReceived(content: String,
+                                      fromUser: UserInfo){
+    }
 }
-
 
 extension MainBottomVM { /** info **/
     struct MoreInfo {

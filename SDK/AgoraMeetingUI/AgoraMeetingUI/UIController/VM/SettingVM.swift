@@ -204,4 +204,8 @@ extension SettingVM: RoomEventHandler {
         updatePermission(device: device,
                          access: access)
     }
+    
+    func onFlexRoomPropertiesChanged(properties: RoomProperties) {
+        Log.debug(text: properties.description)
+    }
 }

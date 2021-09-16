@@ -148,6 +148,7 @@ extension MainTopVM: RoomEventHandler {
     
     func onUserPermissionUpdated(device: DeviceType,
                                  access: Bool) {}
+    func onFlexRoomPropertiesChanged(properties: RoomProperties) {}
 }
 
 extension MainTopVM: MediaEventHandler {
@@ -168,7 +169,7 @@ extension MainTopVM: MediaEventHandler {
                                    time: Int) {}
 }
 
-extension MainTopVM: UsersEvnetHandler {
+extension MainTopVM: UsersEventHandler {
     func onUserListUpdated(userList: [UserDetailInfo]) {}
     
     func onLocalConnectStateChanged(state: ConnectState) {

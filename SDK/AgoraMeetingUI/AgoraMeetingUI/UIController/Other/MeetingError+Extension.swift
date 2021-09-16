@@ -19,6 +19,8 @@ extension MeetingError {
             return rebaseHttp(code: code)
         case .meetingServer: /** from http provider **/
             return rebaseMeetingServer(code: code)
+        case .huanxin:
+            return "hx: " + message
         }
     }
     

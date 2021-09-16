@@ -72,7 +72,7 @@ extension MainRenderVM {
     func saveScreenParamInUserDefault(screenInfo: ScreenInfo) {
         let screenId = screenInfo.streamId
         let token = screenInfo.token
-        let channnelId = screenInfo.channnelId
+        let channelId = screenInfo.channelId
         let appId = screenInfo.appId
         let infoDict = Bundle.main.infoDictionary
         let temp = infoDict?["AppGroupId"] as? String
@@ -84,7 +84,7 @@ extension MainRenderVM {
         userDefault?.setValue(appId, forKey: "appid")
         userDefault?.setValue(screenId, forKey: "screenid")
         userDefault?.setValue(token, forKey: "token")
-        userDefault?.setValue(channnelId, forKey: "channelid")
+        userDefault?.setValue(channelId, forKey: "channelid")
         userDefault?.synchronize()
     }
     

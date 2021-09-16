@@ -14,4 +14,6 @@ extension ChatMessageVM: MessagesEventHandler {
     }
     
     func onNotifyMessagesUpdated(msgs: [NotifyMessage]) {}
+    func onPrivateChatMessageReceived(content: String,
+                                      fromUser: UserInfo){}
 }
