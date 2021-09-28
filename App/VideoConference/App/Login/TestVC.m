@@ -26,7 +26,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSString *token = [TokenBuilder buildToken:KeyCenter.agoraAppid
               appCertificate:KeyCenter.appCertificate
-                    userUuid:@"E2C5EC8F-FEE0-4DED-AB0A-954EAEA28F8F"];
+                    userUuid:@"341231231"];
     __weak TestVC *weakSelf = self;
     MeetingConfig *config = [[MeetingConfig alloc] initWithAppId:KeyCenter.agoraAppid
                                                         logLevel:LogLevelAll];
@@ -35,10 +35,10 @@
     
     _sdk.exitRoomDelegate = self;
     _sdk.networkQualityDelegate = self;
-    LaunchConfig *launchConfig = [[LaunchConfig alloc] initWithUserId:@"E2C5EC8F-FEE0-4DED-AB0A-954EAEA28F8F"
-                                                             userName:@"666"
-                                                               roomId:@"6412121cbb2dc2cb9e460cfee7046be2"
-                                                             roomName:@"10086"
+    LaunchConfig *launchConfig = [[LaunchConfig alloc] initWithUserId:@"341231231"
+                                                             userName:@"1213413"
+                                                               roomId:@"124124134"
+                                                             roomName:@"12312341"
                                                          roomPassword:@""
                                                              duration:45 * 60
                                                             maxPeople:1000
@@ -46,7 +46,8 @@
                                                               openMic:true
                                                                 token:token
                                                  userInoutLimitNumber:10
-                                                  localUserProperties:@{}];
+                                                  localUserProperties:@{}
+                                                        flexRoomProps:@{}];
     
     [_sdk launchWithLaunchConfig:launchConfig
                         success:^(AgoraMeetingUI *nvc) {

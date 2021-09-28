@@ -46,6 +46,7 @@ public class MainUIManager: UIViewController {
         layoutView()
         view.showLoading()
         commonInit()
+        
     }
     
     public override func viewWillAppear(_ animated: Bool) {

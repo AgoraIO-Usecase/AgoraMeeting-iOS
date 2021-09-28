@@ -74,11 +74,9 @@ class SettingUIManager: UIViewController {
     }
     
     func addDebugButton() {
-        #if DEBUG
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
                                                             target: self,
                                                             action: #selector(debugAction))
-        #endif
     }
     
     @objc func debugAction() {

@@ -148,7 +148,8 @@ class LoginVC: BaseViewController {
                                 enableAudio: enableAudio,
                                 userId: vm.currentUserId,
                                 roomId: roomName.md5(),
-                                localUserProperties: ["my": "aaa"])
+                                localUserProperties: ["my": "aaa"],
+                                flexRoomProps: ["name" : "roomName"])
         vm.entryRoom(info: info)
     }
     

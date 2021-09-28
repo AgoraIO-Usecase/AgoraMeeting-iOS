@@ -15,7 +15,8 @@ import AgoraSceneStatistic
 
 protocol LoginVMDelegate: NSObject {
     func loginVMDidFailEntryRoomWithTips(tips: String)
-    func loginVMDidSuccessEntryRoomWithInfo(info: LoginVM.Info, nvc: AgoraMeetingUI)
+    func loginVMDidSuccessEntryRoomWithInfo(info: LoginVM.Info,
+                                            nvc: AgoraMeetingUI)
     func loginVMShouldUpdateNetworkIcon(imageName: String)
     func loginVMShouldShowUpdateVersion()
     func loginVMShouldChangeJoinButtonEnable(enable: Bool)
@@ -24,6 +25,7 @@ protocol LoginVMDelegate: NSObject {
 
 class LoginVM: NSObject {
     weak var delegate: LoginVMDelegate?
+    /// 用户id 最大64字节
     let currentUserId = StorageManager.uuid
     var sdk: MeetingSDK = MeetingSDK(config: .init(appId: KeyCenter.agoraAppid(),
                                                    logLevel: .info))
@@ -79,6 +81,8 @@ class LoginVM: NSObject {
     }
     
     func entryRoom(info: Info) {
+        let string = "{\"host\":\"\(host)\"}"
+        sdk.setParameters(parameters: string)
         
         do {
             try isValidUserName(text: info.userName)
@@ -104,7 +108,11 @@ class LoginVM: NSObject {
     }
     
     private func createLaunchConfig(info: Info) -> LaunchConfig {
+        #if DEBUG
         let duration = 45 * 60
+        #else
+        let duration = 45 * 60
+        #endif
         let appId = KeyCenter.agoraAppid()
         let rtmToken = TokenBuilder.buildToken(appId,
                                                appCertificate: KeyCenter.appCertificate(),
@@ -121,7 +129,8 @@ class LoginVM: NSObject {
                             openMic: info.enableAudio,
                             token: rtmToken,
                             userInoutLimitNumber: userInoutLimitNumber,
-                            localUserProperties: info.localUserProperties)
+                            localUserProperties: info.localUserProperties,
+                            flexRoomProps: info.flexRoomProps)
     }
     
     func signalImageName(type: NetworkQuality) -> String {
@@ -150,7 +159,11 @@ class LoginVM: NSObject {
     }
     
     var host: String {
+        #if Release
         return "https://api.agora.io"
+        #else
+        return "http://api-solutions-dev.bj2.agoralab.co"
+        #endif
     }
     
     func submitScore(score: ASScore) {
@@ -226,6 +239,7 @@ extension LoginVM {
         let userId: String
         let roomId: String
         let localUserProperties: UserProperties
+        let flexRoomProps: RoomProperties
     }
 }
 
@@ -236,14 +250,14 @@ extension LoginVM: NetworkQualityDelegate {
     }
 }
 
-    extension LoginVM: ExitRoomDelegate {
-        func onExit(cache: RoomCache,
-                    existReason: ExistReason) {
-            print("existReason \(existReason)")
-            startNetworkTest()
-            invokeShouldShowScoreVC()
-        }
+extension LoginVM: ExitRoomDelegate {
+    func onExit(cache: RoomCache,
+                existReason: ExistReason) {
+        print("existReason \(existReason)")
+        startNetworkTest()
+        invokeShouldShowScoreVC()
     }
+}
 
 extension LoginVM {
     func invokeShouldUpdateNetworkIcon(imageName: String) {
@@ -269,4 +283,6 @@ extension LoginVM {
             self.delegate?.loginVMShouldShowScoreVC()
         }
     }
+    
+    
 }

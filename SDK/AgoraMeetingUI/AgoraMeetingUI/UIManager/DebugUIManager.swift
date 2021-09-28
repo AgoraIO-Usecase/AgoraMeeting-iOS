@@ -47,9 +47,20 @@ class DebugUIManager: UIViewController {
     
     func readUserProperty() {
         if let userId = contextPool?.usersContext.getLocalUserInfo().userId {
-            let result = contextPool?.usersContext.getUserProperties(userId: userId)
+            let result = contextPool?.usersContext
+                .getUserProperties(userId: userId)
+            let text = "\(result ?? [:])"
             Log.debug(text: "read: \(result ?? [:])",
                       tag: "DebugUIManager")
+            let vc = UIAlertController(title: "读取",
+                                       message: "UserProperty: \(text)",
+                                       preferredStyle: .alert)
+            vc.addAction(.init(title: "关闭",
+                               style: .default,
+                               handler: nil))
+            present(vc,
+                    animated: true,
+                    completion: nil)
         }
     }
     
@@ -65,7 +76,18 @@ class DebugUIManager: UIViewController {
     
     func readRoomProperty() {
         let flexRoomProperties = contextPool?.roomContext.getFlexRoomProperties()
+        let text = "\(flexRoomProperties ?? [:])"
         Log.debug(text: "read: \(flexRoomProperties ?? [:])", tag: "DebugUIManager")
+        
+        let vc = UIAlertController(title: "读取",
+                                   message: "RoomProperty: \(text)",
+                                   preferredStyle: .alert)
+        vc.addAction(.init(title: "关闭",
+                           style: .default,
+                           handler: nil))
+        present(vc,
+                animated: true,
+                completion: nil)
     }
     
     func sendPrivateMsg() {
@@ -141,6 +163,9 @@ extension DebugUIManager: UsersEventHandler {
                                  full: UserProperties) {
         Log.debug(text: "fill:\(full)",
                   tag: "DebugUIManager")
+        DispatchQueue.main.async { [weak self] in
+            self?.view.show(toast: "收到消息UserProperties")
+        }
     }
 }
 
