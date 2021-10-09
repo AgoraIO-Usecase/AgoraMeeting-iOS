@@ -130,7 +130,8 @@ class LoginVM: NSObject {
                             token: rtmToken,
                             userInoutLimitNumber: userInoutLimitNumber,
                             localUserProperties: info.localUserProperties,
-                            flexRoomProps: info.flexRoomProps)
+                            flexRoomProps: info.flexRoomProps,
+                            maxHost: 3)
     }
     
     func signalImageName(type: NetworkQuality) -> String {
