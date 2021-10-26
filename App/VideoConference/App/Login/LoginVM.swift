@@ -160,11 +160,7 @@ class LoginVM: NSObject {
     }
     
     var host: String {
-        #if Release
         return "https://api.agora.io"
-        #else
-        return "http://api-solutions-dev.bj2.agoralab.co"
-        #endif
     }
     
     func submitScore(score: ASScore) {
