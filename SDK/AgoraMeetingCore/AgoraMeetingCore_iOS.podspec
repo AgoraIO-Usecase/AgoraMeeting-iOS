@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 spec.name         = "AgoraMeetingCore_iOS"
-spec.version      = "1.1.4"
+spec.version      = "1.1.5"
 spec.summary      = "AgoraMeetingCore"
 spec.description  = "Agora Meeting Core"
 
@@ -10,7 +10,7 @@ spec.author       = { "Agora Lab" => "developer@agora.io" }
 spec.platform = :ios
 spec.ios.deployment_target = "10.0"
 spec.swift_versions = "5.0"
-spec.source = { :http => 'https://download.agora.io/sdk/release/AgoraMeetingCore-1.1.4-1-20211008.zip', :sha1 => 'fa52e51f74c99f190680e18accc0e77adee1088c' }
+spec.source = { :http => 'https://download.agora.io/sdk/release/AgoraMeetingCore-1.1.5-1-20211201.zip', :sha1 => '6844f5b7ccfa44e9f30f1297130694105b33d74c' }
 spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'DEFINES_MODULE' => 'YES' }
 spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'DEFINES_MODULE' => 'YES' }
 

@@ -39,7 +39,12 @@ static NSInteger rightRange = 10;
 
 - (void)setBadgeCount:(NSInteger)count {
     self.badge.hidden = count == 0;
-    [self.badge setText:[NSString stringWithFormat:@"%zi",count]];
+    if (count > 99) {
+        [self.badge setText:@"99+"];
+    }
+    else {
+        [self.badge setText:[NSString stringWithFormat:@"%zi",count]];
+    }
     [self.badge setTextColor:[UIColor colorWithHexString:@"FFFFFF"]];
     [self.badge setFont:[UIFont fontWithName:@"Helvetica Neue" size:10.f]];
     [self.badge setFont:[UIFont systemFontOfSize:12 weight:(UIFontWeightMedium)]];
