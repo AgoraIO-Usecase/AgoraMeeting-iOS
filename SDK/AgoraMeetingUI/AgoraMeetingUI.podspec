@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AgoraMeetingUI'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'AgoraMeetingUI'
   s.homepage         = 'https://agora.io'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.dependency 'Presentr'
   s.dependency 'Toast-Swift'
   s.dependency 'DifferenceKit'
-  s.dependency 'AgoraMeetingCore_iOS', '>= 1.1.4'
+  s.dependency 'AgoraMeetingCore_iOS', '>= 1.1.5'
 end
